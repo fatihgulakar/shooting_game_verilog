@@ -1,12 +1,12 @@
 module freq_divider #(
-  parameter n = 100
+  parameter nbits = 4
 )(
   input  in_clk,
   input  reset,
   output out_clk
 );
 
-reg [$clog2(n) - 1:0] counter = 1'b0;
+reg [nbits - 1:0] counter;
 
 always @(posedge in_clk or posedge reset) begin
   if(reset) begin
@@ -16,6 +16,6 @@ always @(posedge in_clk or posedge reset) begin
   end
 end
 
-assign out_clk = counter[$clog2(n) - 1];
+assign out_clk = counter[nbits - 1];
 
 endmodule

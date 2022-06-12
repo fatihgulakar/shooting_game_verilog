@@ -19,8 +19,8 @@ output reg [31:0] row
   parameter v_fp = 10;
   parameter v_bp = 29;
 
-  reg [31:0] h_count = 0;
-  reg [31:0] v_count = 0;
+  reg [31:0] h_count;
+  reg [31:0] v_count;
 
   always @(posedge vga_clk or posedge reset) begin
     if((reset == 1'b1)) begin
