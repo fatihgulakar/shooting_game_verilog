@@ -1,30 +1,27 @@
 //--------------------------------------------------------------------------------
 // 1v1 two player shooting game code implemented on nexys3 board
 //--------------------------------------------------------------------------------
-//use IEEE.NUMERIC_STD.ALL;
-// no timescale needed
 
 module main(
-input wire ps2_data,
-input wire ps2_clk,
-input wire board_clk,
-input wire start,
-input wire reset,
-output wire hsync,
-output wire vsync,
-output wire [2:0] red,
-output wire [2:0] green,
-output wire [1:0] blue
+  input             ps2_data,
+  input             ps2_clk,
+  input             board_clk,
+  input             start,
+  input             reset,
+  output wire       hsync,
+  output wire       vsync,
+  output wire [2:0] red,
+  output wire [2:0] green,
+  output wire [1:0] blue
 );
 
-
-
-
-wire [31:0] column;
-wire [31:0] row;
-wire game_clk; wire vga_clk;
-wire disp_en;
-wire [4:0] p1_control = 5'b00000; wire [4:0] p2_control = 5'b00000;
+  wire [31:0] column;
+  wire [31:0] row;
+  wire        game_clk; 
+  wire        vga_clk;
+  wire        disp_en;
+  wire [4:0]  p1_control; 
+  wire [4:0]  p2_control;
 
   color_generator color(
     .game_clk   (game_clk),
@@ -39,16 +36,17 @@ wire [4:0] p1_control = 5'b00000; wire [4:0] p2_control = 5'b00000;
     .red        (red),
     .green      (green),
     .blue       (blue)
-    );
+  );
 
   sync_generator sync(
-      vga_clk,
-    1'b0,
-    disp_en,
-    hsync,
-    vsync,
-    column,
-    row);
+    .vga_clk (vga_clk),
+    .reset   (reset),
+    .disp_en (disp_en),
+    .hsync   (hsync),
+    .vsync   (vsync),
+    .column  (column),
+    .row     (row)
+  );
 
   kb2game keyb(
     board_clk,

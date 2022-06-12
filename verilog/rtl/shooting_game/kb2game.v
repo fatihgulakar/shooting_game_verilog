@@ -1,7 +1,8 @@
 module kb2game(
-  input wire board_clk,
-  input wire ps2_clk,
-  input wire ps2_data,
+  input            board_clk,
+  input            reset,
+  input            ps2_clk,
+  input            ps2_data,
   output reg [4:0] p1, // 0 to 4 up down left right shoot
   output reg [4:0] p2  // 0 to 4 up down left right shoot
 );
@@ -24,10 +25,11 @@ module kb2game(
   parameter P2_s = 8'h4C;  // S.
 
   freq_divider #(
-    .n(1)
+    .nbits(1)
   ) n1(
-    board_clk,
-    clk
+    .in_clk  (board_clk),
+    .reset   (reset),
+    .out_clk (clk)
   );
 
   //50 MHz clock

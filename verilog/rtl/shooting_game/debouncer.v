@@ -1,38 +1,27 @@
-module debouncer(
+module debouncer #(
+  parameter num_stage = 4
+)(
   input wire in,
   input wire clk,
   output wire out
 );
 
-  wire sig1;
-  wire sig2;
-  wire sig3;
-  wire sig4;
+  wire [num_stage:0] stages;
 
-  dff ex0(
-    .q(sig1),
-    .clk(clk),
-    .d(in)
-  );
+  assign stages[0] = in;
 
-  dff ex1(
-    .q(sig2),
-    .clk(clk),
-    .d(sig1)
-  );
 
-  dff ex2(
-    .q(sig3),
-    .clk(clk),
-    .d(sig2)
-  );
+  genvar i;
+  generate
+    for(i=0; i<num_stage; i=i+1) begin
+      dff stage(
+        .d    (stages[i]),
+        .clk  (clk),
+        .q    (stages[i+1])
+      );
+    end
+  endgenerate
 
-  dff ex3(
-    .q(sig4),
-    .clk(clk),
-    .d(sig3)
-  );
-
-  assign out = sig1 & sig4 & sig3 & sig2;
+  assign out = &stages[num_stage:1];
 
 endmodule

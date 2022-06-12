@@ -9,3 +9,4 @@ precheck_results
 venv
 caravel
 mgmt_core_wrapper
+.vscode
