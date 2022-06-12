@@ -3,3 +3,9 @@ precheck_results
 *.lst
 *.vcd
 *.gtkw
+*.hier
+*.elf
+*.vvp
+venv
+caravel
+mgmt_core_wrapper
