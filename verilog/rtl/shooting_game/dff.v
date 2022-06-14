@@ -3,7 +3,7 @@ module dff(
     input clk,
     output q
 );
-    always@(posedge clk)
+    always@(posedge clk) begin
         q <= d;
-
+    end
 endmodule

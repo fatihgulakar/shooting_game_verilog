@@ -76,16 +76,16 @@ module user_proj_example #(
     wire [`MPRJ_IO_PADS-1:0] io_oeb;
 
     // IO
-    assign io_out = count;
+    //assign io_out = count;
     assign io_oeb = {(`MPRJ_IO_PADS-1){rst}};
 
     // IRQ
     assign irq = 3'b000;	// Unused
 
     // LA
-    assign la_data_out = {{(127-BITS){1'b0}}, count};
+    assign la_data_out = {{(120){1'b0}}, red, green, blue};
     // Assuming LA probes [63:32] are for controlling the count register  
-    assign la_write = ~la_oenb[63:32] & ~{BITS{valid}};
+
     // Assuming LA probes [65:64] are for controlling the count clk & reset  
     assign clk = (~la_oenb[64]) ? la_data_in[64]: wb_clk_i;
     assign rst = (~la_oenb[65]) ? la_data_in[65]: wb_rst_i;
@@ -99,7 +99,7 @@ module user_proj_example #(
     wire [2:0] green = io_out[5 +: 3];
     wire [1:0] blue  = io_out[9 +: 2];
 
-    main shooting_game(
+    main game(
         .ps2_data   (ps2_data),
         .ps2_clk    (ps2_clk),
         .board_clk  (clk),

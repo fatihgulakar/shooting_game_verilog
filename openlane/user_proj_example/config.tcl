@@ -22,7 +22,18 @@ set ::env(DESIGN_NAME) user_proj_example
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/user_proj_example.v \
+	$script_dir/../../verilog/rtl/shooting_game/obj_b.v \
+	$script_dir/../../verilog/rtl/shooting_game/obj_p.v \
+	$script_dir/../../verilog/rtl/shooting_game/obj_heart.v \
+	$script_dir/../../verilog/rtl/shooting_game/kb.v \
+	$script_dir/../../verilog/rtl/shooting_game/kb2game.v
+	$script_dir/../../verilog/rtl/shooting_game/dff.v \
+	$script_dir/../../verilog/rtl/shooting_game/debouncer.v \
+	$script_dir/../../verilog/rtl/shooting_game/freq_divider.v \
+	$script_dir/../../verilog/rtl/shooting_game/color_generator.v \
+	$script_dir/../../verilog/rtl/shooting_game/sync_generator.v \
+	$script_dir/../../verilog/rtl/shooting_game/main.v"
 
 set ::env(DESIGN_IS_CORE) 0
 

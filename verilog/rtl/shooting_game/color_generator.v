@@ -90,7 +90,7 @@ module color_generator(
 	reg  [1:0] p1_dir     ; //: integer range 0 to 3 := 0 ;--direction of the character (0-up),(1-down),(2-left),(3-right)
 	//health bar of player 1
 	reg [1:0] p1_health ; // integer range 0 to 3 := 2; -- health. if it drops to 0 other player wins the game
-	reg [1:0] p1_h_en // : std_logic_vector( 1 downto 0 ) := "11" ;--visibility of health bar
+	reg [1:0] p1_h_en; // : std_logic_vector( 1 downto 0 ) := "11" ;--visibility of health bar
 	localparam integer p1_h_x = window_w - 45 ;
 	localparam integer p1_h_y = window_h - 25 ;
 	reg [1:0]  p1_h_data ;//: std_logic_vector( 1 downto 0 ) := "00" ;--pixel data of health bar
@@ -111,7 +111,7 @@ module color_generator(
 	reg  [1:0] p2_dir     ; //: integer range 0 to 3 := 1 ;--direction of the character (0-up),(1-down),(2-left),(3-right)
 	//health bar of player 2
 	reg [1:0] p2_health ; // integer range 0 to 3 := 2; -- health. if it drops to 0 other player wins the game
-	reg [1:0] p2_h_en // : std_logic_vector( 1 downto 0 ) := "11" ;--visibility of health bar
+	reg [1:0] p2_h_en; // : std_logic_vector( 1 downto 0 ) := "11" ;--visibility of health bar
 	localparam integer p2_h_x = 10 ;
 	localparam integer p2_h_y = 10 ;
 	reg [1:0]  p2_h_data ;//: std_logic_vector( 1 downto 0 ) := "00" ;--pixel data of health bar
@@ -124,7 +124,7 @@ module color_generator(
 	reg [1:0] b2_dir; // : integer range 0 to 3 := 0 ;--direction of the character (0-up),(1-down),(2-left),(3-right)
 	
 
-  always@(posedge game_clk || posedge reset) begin
+  always@(posedge game_clk or posedge reset) begin
     if(reset) begin
       game_state  <= menu_main;
       p1_x        <= window_w-180;
@@ -135,8 +135,8 @@ module color_generator(
       p2_y        <= 40;
       p2_dir      <= 1;
       p2_health   <= 2;
-      b1_fired    <= '0';
-      b2_fired    <= '0';
+      b1_fired    <= 0;
+      b2_fired    <= 0;
     end else begin
       if(game_state == menu_main) begin
         if(start) begin
@@ -165,7 +165,7 @@ module color_generator(
           p1_dir    <= 3;
           p1_x      <= p1_x + p_vel;
         end else begin
-          p1_moving <= '0';
+          p1_moving <= 0;
         end
         // p2
         if (up_2) begin
@@ -185,7 +185,7 @@ module color_generator(
           p2_dir    <= 3;
           p2_x      <= p2_x + p_vel;
         end else begin
-          p2_moving <= '0';
+          p2_moving <= 0;
         end
         // firing && moving bullets
         // bullet1
@@ -325,10 +325,10 @@ module color_generator(
         end
 
         // game over conditions check
-        if(p1_health = 0) begin
+        if(p1_health == 0) begin
           game_state <= menu_win_p2;
         end
-        if(p2_health = 0) begin
+        if(p2_health == 0) begin
           game_state <= menu_win_p1;
         end
       end
@@ -354,10 +354,10 @@ module color_generator(
   assign p2_h_en[0] = ((column >= p2_h_x) && (column < p2_h_x + h_w)) && ((row >= p2_h_y) && (row < p2_h_y + h_h)) && p2_health > 0;
   assign p2_h_en[1] = ((column >= p2_h_x + h_w+5) && (column < p2_h_x + 2*h_w+5)) && ((row >= p2_h_y) && (row < p2_h_y + h_h)) && p2_health > 1;
 
-  obj_heart obj_h11(.x(column-p1_h_x), y(row-p1_h_y), .en(p1_h_en[0]), data(p1_h_data[0]));
-  obj_heart obj_h12(.x(column-(p1_h_x+h_w+5)), y(row-p1_h_y), .en(p1_h_en[1]), data(p1_h_data[1]));
-  obj_heart obj_h21(.x(column-p2_h_x), y(row-p2_h_y), .en(p2_h_en[0]), data(p1_h_data[0]));
-  obj_heart obj_h22(.x(column-(p2_h_x+h_w+5)), y(row-p2_h_y), .en(p2_h_en[1]), data(p2_h_data[1]));
+  obj_heart obj_h11(.x(column-p1_h_x), .y(row-p1_h_y), .en(p1_h_en[0]), .data(p1_h_data[0]));
+  obj_heart obj_h12(.x(column-(p1_h_x+h_w+5)), .y(row-p1_h_y), .en(p1_h_en[1]), .data(p1_h_data[1]));
+  obj_heart obj_h21(.x(column-p2_h_x), .y(row-p2_h_y), .en(p2_h_en[0]), .data(p1_h_data[0]));
+  obj_heart obj_h22(.x(column-(p2_h_x+h_w+5)), .y(row-p2_h_y), .en(p2_h_en[1]), .data(p2_h_data[1]));
 
   always@(*) begin
     sel_pix = 0;
@@ -420,6 +420,6 @@ module color_generator(
 
   assign red = disp_en ? pix[7:5] : 3'b000;
   assign green = disp_en ? pix[4:2] : 3'b000;
-  assign blue = disp_en ? pix[1:0] ? 3'b000;
+  assign blue = disp_en ? pix[1:0] : 3'b000;
 
 endmodule

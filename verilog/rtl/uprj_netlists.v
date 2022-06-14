@@ -25,4 +25,15 @@
 `else
     `include "user_project_wrapper.v"
     `include "user_proj_example.v"
+    `include "shooting_game/obj_b.v"
+    `include "shooting_game/obj_p.v"
+    `include "shooting_game/obj_heart.v"
+    `include "shooting_game/kb.v"
+    `include "shooting_game/kb2game.v"
+    `include "shooting_game/dff.v"
+    `include "shooting_game/debouncer.v"
+    `include "shooting_game/freq_divider.v"
+    `include "shooting_game/color_generator.v"
+    `include "shooting_game/sync_generator.v"
+    `include "shooting_game/main.v"
 `endif
