@@ -29,7 +29,7 @@ export MISMATCHES_OK=1
 # Install lite version of caravel, (1): caravel-lite, (0): caravel
 CARAVEL_LITE?=1
 
-MPW_TAG ?= mpw-6b
+MPW_TAG ?= mpw-6c
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite

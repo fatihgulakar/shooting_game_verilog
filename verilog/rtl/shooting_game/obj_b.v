@@ -20,7 +20,7 @@ initial begin
 	rom[5] = {1'b0,1'b0,1'b1,1'b1,1'b0,1'b0};
 end
 
-assign data = en ? rom_b[y][x] : 1'b0;
+assign data = en ? rom[y][x] : 1'b0;
 
 
 endmodule
