@@ -1,4 +1,8 @@
-module obj_b(
+//bullets of characters
+//----------------------------------------------------------------------------------
+
+
+module obj_b (
     input [2:0] x,
     input [2:0] y,
     input       en,
@@ -16,7 +20,6 @@ initial begin
 	rom[5] = {1'b0,1'b0,1'b1,1'b1,1'b0,1'b0};
 end
  
-
 assign data = en ? rom[y][x] : 1'b0;
 
 

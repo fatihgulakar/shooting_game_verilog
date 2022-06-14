@@ -1,7 +1,7 @@
 module dff(
     input d,
     input clk,
-    output q
+    output reg q
 );
     always@(posedge clk) begin
         q <= d;

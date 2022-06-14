@@ -1,4 +1,8 @@
-module freq_divider #(
+//----------------------------------------------------------------------------------
+//-- Frequency divider dividing 100MHz clock by 2^n
+//----------------------------------------------------------------------------------
+
+ module freq_divider #(
   parameter nbits = 4
 )(
   input  in_clk,
@@ -6,16 +10,16 @@ module freq_divider #(
   output out_clk
 );
 
-reg [nbits - 1:0] counter;
-
-always @(posedge in_clk or posedge reset) begin
-  if(reset) begin
-    counter <= 0;
-  end else begin
-    counter <= counter + 1;
+  reg [nbits - 1:0] counter;
+  
+  always @(posedge in_clk or posedge reset) begin
+    if(reset) begin
+      counter <= 0;
+    end else begin
+      counter <= counter + 1;
+    end
   end
-end
-
-assign out_clk = counter[nbits - 1];
+  
+  assign out_clk = counter[nbits - 1];
 
 endmodule
