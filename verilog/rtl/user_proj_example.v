@@ -76,8 +76,9 @@ module user_proj_example #(
     wire [`MPRJ_IO_PADS-1:0] io_oeb;
 
     // IO
-    //assign io_out = count;
-    assign io_oeb = {(`MPRJ_IO_PADS-1){rst}};
+    assign io_out[37:13] = 0;
+    assign io_oeb[2:0] = 3'b111;
+    assign io_oeb[37:3] = 0;
 
     // IRQ
     assign irq = 3'b000;	// Unused
@@ -89,15 +90,16 @@ module user_proj_example #(
     // Assuming LA probes [65:64] are for controlling the count clk & reset  
     assign clk = (~la_oenb[64]) ? la_data_in[64]: wb_clk_i;
     assign rst = (~la_oenb[65]) ? la_data_in[65]: wb_rst_i;
+    
 
     wire ps2_data    = io_in[0];
     wire ps2_clk     = io_in[1];
     wire start       = io_in[2];
-    wire hsync       = io_out[0];
-    wire vsync       = io_out[1];
-    wire [2:0] red   = io_out[2 +: 3];
-    wire [2:0] green = io_out[5 +: 3];
-    wire [1:0] blue  = io_out[9 +: 2];
+    wire hsync       = io_out[3];
+    wire vsync       = io_out[4];
+    wire [2:0] red   = io_out[5 +: 3];
+    wire [2:0] green = io_out[8 +: 3];
+    wire [1:0] blue  = io_out[11 +: 2];
 
     main game(
         .ps2_data   (ps2_data),

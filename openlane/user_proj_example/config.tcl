@@ -38,16 +38,36 @@ set ::env(VERILOG_FILES) "\
 set ::env(DESIGN_IS_CORE) 0
 
 set ::env(CLOCK_PORT) "wb_clk_i"
-set ::env(CLOCK_NET) "counter.clk"
+set ::env(CLOCK_NET) "game.board_clk"
 set ::env(CLOCK_PERIOD) "10"
 
-set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 900 600"
 
+# Floorplan
+set ::env(FP_SIZING) absolute
+set ::env(DIE_AREA) "0 0 1250 1250"
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
+# Placement
 set ::env(PL_BASIC_PLACEMENT) 0
-set ::env(PL_TARGET_DENSITY) 0.05
+set ::env(PL_TARGET_DENSITY) 0.15
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) 0.55
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.5
+set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) 65
+
+# CTS
+set ::env(CTS_TOLERANCE) 25
+set ::env(CTS_TARGET_SKEW) 135
+set ::env(CTS_CLK_BUFFER_LIST) "sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8"
+set ::env(CTS_SINK_CLUSTERING_SIZE) "16"
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) 135
+set ::env(CLOCK_BUFFER_FANOUT) "8"
+
+# Routing
+set ::env(GLB_RT_OVERFLOW_ITERS) 70
+set ::env(ROUTING_CORES) 4
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) 0.8
+set ::env(GLB_RT_MAX_DIODE_INS_ITERS) 10
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) 110
 
 # Maximum layer used for routing is metal 4.
 # This is because this macro will be inserted in a top level (user_project_wrapper) 
@@ -61,7 +81,6 @@ set ::env(RT_MAX_LAYER) {met4}
 set ::env(VDD_NETS) [list {vccd1}]
 set ::env(GND_NETS) [list {vssd1}]
 
-set ::env(DIODE_INSERTION_STRATEGY) 4 
+set ::env(DIODE_INSERTION_STRATEGY) 4
 # If you're going to use multiple power domains, then disable cvc run.
 set ::env(RUN_CVC) 1
-
