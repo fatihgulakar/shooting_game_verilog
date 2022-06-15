@@ -1,0 +1,22 @@
+
+===========================================================================
+ report_clock_skew
+============================================================================
+
+======================== Slowest Corner ==================================
+
+Clock user_clock2
+No launch/capture paths found.
+
+
+======================= Typical Corner ===================================
+
+Clock user_clock2
+No launch/capture paths found.
+
+
+======================= Fastest Corner ===================================
+
+Clock user_clock2
+No launch/capture paths found.
+

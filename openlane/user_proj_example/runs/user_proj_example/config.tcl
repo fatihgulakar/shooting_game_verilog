@@ -21,7 +21,7 @@ set ::env(CLOCK_TREE_SYNTH) {1}
 set ::env(CLOCK_WIRE_RC_LAYER) {met5}
 set ::env(CONFIGS) {/openlane/configuration/floorplan.tcl /openlane/configuration/general.tcl /openlane/configuration/placement.tcl /openlane/configuration/synthesis.tcl /openlane/configuration/extraction.tcl /openlane/configuration/routing.tcl /openlane/configuration/checkers.tcl /openlane/configuration/cts.tcl /openlane/configuration/lvs.tcl}
 set ::env(CTS_CLK_BUFFER_LIST) {sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8}
-set ::env(CTS_CLK_MAX_WIRE_LENGTH) {135}
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) {45}
 set ::env(CTS_DISABLE_POST_PROCESSING) {0}
 set ::env(CTS_MAX_CAP) {1.53169}
 set ::env(CTS_REPORT_TIMING) {1}
@@ -115,9 +115,9 @@ set ::env(GLB_OPTIMIZE_MIRRORING) {1}
 set ::env(GLB_RESIZER_ALLOW_SETUP_VIOS) {0}
 set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) {50}
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) {0.1}
-set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {110}
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {40}
 set ::env(GLB_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {0.8}
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {1}
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) {0}
 set ::env(GLB_RT_ADJUSTMENT) {0.3}
 set ::env(GLB_RT_ALLOW_CONGESTION) {0}
@@ -190,10 +190,10 @@ set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) {65}
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) {0.5}
 set ::env(PL_RESIZER_MAX_CAP_MARGIN) {20}
 set ::env(PL_RESIZER_MAX_SLEW_MARGIN) {20}
-set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {0}
+set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {100}
 set ::env(PL_RESIZER_REPAIR_TIE_FANOUT) {1}
 set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.55}
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.75}
 set ::env(PL_RESIZER_TIE_SEPERATION) {0}
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) {1}
 set ::env(PL_ROUTABILITY_DRIVEN) {0}
@@ -296,7 +296,7 @@ set ::env(cts_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane
 set ::env(cts_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/cts}
 set ::env(cts_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/cts}
 set ::env(cts_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts}
-set ::env(datetime) {2022.06.15_13.20.19}
+set ::env(datetime) {2022.06.15_15.53.24}
 set ::env(eco_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/eco}
 set ::env(eco_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/eco}
 set ::env(eco_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/eco}
@@ -356,7 +356,7 @@ set ::env(CORE_AREA) {5.5200000000000005 10.88 1244.48 1239.12}
 set ::env(CORE_HEIGHT) {1226.72}
 set ::env(CORE_WIDTH) {1238.78}
 set ::env(CTS_CLK_BUFFER_LIST) {sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8}
-set ::env(CTS_CLK_MAX_WIRE_LENGTH) {135}
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) {45}
 set ::env(CTS_CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/placement/user_proj_example.def}
 set ::env(CTS_DISABLE_POST_PROCESSING) {0}
 set ::env(CTS_MAX_CAP) {1.53169}
@@ -467,9 +467,9 @@ set ::env(GLB_OPTIMIZE_MIRRORING) {1}
 set ::env(GLB_RESIZER_ALLOW_SETUP_VIOS) {0}
 set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) {50}
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) {0.1}
-set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {110}
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {40}
 set ::env(GLB_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {0.8}
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {1}
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) {0}
 set ::env(GLB_RT_ADJUSTMENT) {0.3}
 set ::env(GLB_RT_ALLOW_CONGESTION) {0}
@@ -487,7 +487,7 @@ set ::env(GPIO_PADS_LEF) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sk
 set ::env(GPIO_PADS_LEF_CORE_SIDE) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef }
 set ::env(GPIO_PADS_VERILOG) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io.v /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io__gpiov2_pad_wrapped.v }
 set ::env(HOME) {/}
-set ::env(HOSTNAME) {bfd309fa5dda}
+set ::env(HOSTNAME) {f4351e19ae56}
 set ::env(INPUT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/31-powered_def.def}
 set ::env(IO_PCT) {0.2}
 set ::env(KLAYOUT_DRC_KLAYOUT_GDS) {0}
@@ -582,10 +582,10 @@ set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) {65}
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) {0.5}
 set ::env(PL_RESIZER_MAX_CAP_MARGIN) {20}
 set ::env(PL_RESIZER_MAX_SLEW_MARGIN) {20}
-set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {0}
+set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {100}
 set ::env(PL_RESIZER_REPAIR_TIE_FANOUT) {1}
 set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.55}
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.75}
 set ::env(PL_RESIZER_TIE_SEPERATION) {0}
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) {1}
 set ::env(PL_ROUTABILITY_DRIVEN) {0}
@@ -712,7 +712,7 @@ set ::env(cts_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane
 set ::env(cts_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/cts}
 set ::env(cts_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/cts}
 set ::env(cts_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts}
-set ::env(datetime) {2022.06.15_13.20.19}
+set ::env(datetime) {2022.06.15_15.53.24}
 set ::env(drc_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc}
 set ::env(eco_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/eco}
 set ::env(eco_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/eco}
@@ -741,9 +741,9 @@ set ::env(synthesis_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/op
 set ::env(synthesis_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/synthesis}
 set ::env(synthesis_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/synthesis}
 set ::env(synthesis_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis}
-set ::env(timer_end) {1655300354}
-set ::env(timer_routed) {1655299633}
-set ::env(timer_start) {1655299219}
+set ::env(timer_end) {1655309569}
+set ::env(timer_routed) {1655308844}
+set ::env(timer_start) {1655308404}
 set ::env(PDK_ROOT) {/home/fatihgulakar/638_proje/pdks}
 set ::env(ANTENNA_CHECKER_LOG) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/36-antenna.log}
 set ::env(ANTENNA_CHECK_CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def}
@@ -773,7 +773,7 @@ set ::env(CORE_AREA) {5.5200000000000005 10.88 1244.48 1239.12}
 set ::env(CORE_HEIGHT) {1226.72}
 set ::env(CORE_WIDTH) {1238.78}
 set ::env(CTS_CLK_BUFFER_LIST) {sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8}
-set ::env(CTS_CLK_MAX_WIRE_LENGTH) {135}
+set ::env(CTS_CLK_MAX_WIRE_LENGTH) {45}
 set ::env(CTS_CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/placement/user_proj_example.def}
 set ::env(CTS_DISABLE_POST_PROCESSING) {0}
 set ::env(CTS_MAX_CAP) {1.53169}
@@ -885,9 +885,9 @@ set ::env(GLB_OPTIMIZE_MIRRORING) {1}
 set ::env(GLB_RESIZER_ALLOW_SETUP_VIOS) {0}
 set ::env(GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT) {50}
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) {0.1}
-set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {110}
+set ::env(GLB_RESIZER_MAX_WIRE_LENGTH) {40}
 set ::env(GLB_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {0.8}
+set ::env(GLB_RESIZER_SETUP_SLACK_MARGIN) {1}
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) {0}
 set ::env(GLB_RT_ADJUSTMENT) {0.3}
 set ::env(GLB_RT_ALLOW_CONGESTION) {0}
@@ -905,7 +905,7 @@ set ::env(GPIO_PADS_LEF) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sk
 set ::env(GPIO_PADS_LEF_CORE_SIDE) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef }
 set ::env(GPIO_PADS_VERILOG) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io.v /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io__gpiov2_pad_wrapped.v }
 set ::env(HOME) {/}
-set ::env(HOSTNAME) {bfd309fa5dda}
+set ::env(HOSTNAME) {f4351e19ae56}
 set ::env(INPUT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/31-powered_def.def}
 set ::env(IO_PCT) {0.2}
 set ::env(KLAYOUT_DRC_KLAYOUT_GDS) {0}
@@ -1000,10 +1000,10 @@ set ::env(PL_RESIZER_HOLD_MAX_BUFFER_PERCENT) {65}
 set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) {0.5}
 set ::env(PL_RESIZER_MAX_CAP_MARGIN) {20}
 set ::env(PL_RESIZER_MAX_SLEW_MARGIN) {20}
-set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {0}
+set ::env(PL_RESIZER_MAX_WIRE_LENGTH) {100}
 set ::env(PL_RESIZER_REPAIR_TIE_FANOUT) {1}
 set ::env(PL_RESIZER_SETUP_MAX_BUFFER_PERCENT) {50}
-set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.55}
+set ::env(PL_RESIZER_SETUP_SLACK_MARGIN) {0.75}
 set ::env(PL_RESIZER_TIE_SEPERATION) {0}
 set ::env(PL_RESIZER_TIMING_OPTIMIZATIONS) {1}
 set ::env(PL_ROUTABILITY_DRIVEN) {0}
@@ -1130,7 +1130,7 @@ set ::env(cts_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane
 set ::env(cts_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/cts}
 set ::env(cts_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/cts}
 set ::env(cts_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts}
-set ::env(datetime) {2022.06.15_13.20.19}
+set ::env(datetime) {2022.06.15_15.53.24}
 set ::env(drc_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc}
 set ::env(eco_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/eco}
 set ::env(eco_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/eco}
@@ -1159,6 +1159,6 @@ set ::env(synthesis_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/op
 set ::env(synthesis_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/synthesis}
 set ::env(synthesis_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/synthesis}
 set ::env(synthesis_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis}
-set ::env(timer_end) {1655300355}
-set ::env(timer_routed) {1655299633}
-set ::env(timer_start) {1655299219}
+set ::env(timer_end) {1655309570}
+set ::env(timer_routed) {1655308844}
+set ::env(timer_start) {1655308404}

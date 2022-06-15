@@ -1,0 +1,70 @@
+OpenROAD 8d53e9b018dec98fa63e907ddeb6c5406f035361 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+[INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0130]     Created 645 pins.
+[INFO ODB-0131]     Created 1 components and 609 component-terminals.
+[INFO ODB-0132]     Created 8 special nets and 0 connections.
+[INFO ODB-0133]     Created 637 nets and 607 connections.
+[INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def
+[INFO ODB-0222] Reading LEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+[INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/synthesis/pg_define.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0130]     Created 645 pins.
+[INFO ODB-0131]     Created 1 components and 609 component-terminals.
+[INFO ODB-0133]     Created 645 nets and 609 connections.
+[INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/synthesis/pg_define.def
+Top-level design name: user_project_wrapper
+Default power net:  vccd1
+Default ground net: vssd1
+Found a total of 4 power ports.
+Found a total of 4 ground ports.
+Modified power connections of 1 cells (Remaining: 0 ).
+STDOUT:
+OpenROAD 8d53e9b018dec98fa63e907ddeb6c5406f035361 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+warning: `//.tclsh-history' is not writable.
+openroad> read_lef /home/fatihgulakar/638_proje/shooting_game_verilog/openlan
+<tihgulakar/638_proje/shooting_game_verilog/openlane                         /user_project_wrapper/run
+
+<ing_game_verilog/openlane/user_project_wrapper/runs                         /user_project_wrapper/tmp
+
+<user_project_wrapper/runs/user_project_wrapper/tmp/                         merged.lef
+[INFO ODB-0222] Reading LEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+openroad> read_verilog /home/fatihgulakar/638_proje/shooting_game_verilog/ope
+<e/fatihgulakar/638_proje/shooting_game_verilog/open                         lane/user_project_wrapper
+
+<hooting_game_verilog/openlane/user_project_wrapper/                         runs/user_project_wrapper
+
+<ane/user_project_wrapper/runs/user_project_wrapper/                         tmp/synthesis/pg_define.v
+openroad> link_design user_project_wrapper
+[WARNING ORD-1011] LEF master user_proj_example has no liberty cell.
+openroad> write_def /home/fatihgulakar/638_proje/shooting_game_verilog/openla
+<atihgulakar/638_proje/shooting_game_verilog/openlan                         e/user_project_wrapper/ru
+
+<ting_game_verilog/openlane/user_project_wrapper/run                         s/user_project_wrapper/tm
+
+</user_project_wrapper/runs/user_project_wrapper/tmp                         /synthesis/pg_define.def
+openroad> exit
+unable to write history to `//.tclsh-history'
+STDERR:
+
+openroad exit code: 0
+Successfully created a new database
+Modified connections between vccd1 and mprj
+Modified connections between vssd1 and mprj

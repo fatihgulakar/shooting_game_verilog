@@ -1,0 +1,5 @@
+[WARNING]: Skipping Tap/Decap Insertion.
+[WARNING]: All internal macros will not be connected to power.
+[WARNING]: All internal macros will not be connected to power.
+[WARNING]: All internal macros will not be connected to power.
+[WARNING]: There are max slew violations in the design at the typical corner. Please refer to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/routing/22-parasitics_sta.slew.rpt

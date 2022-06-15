@@ -9,8 +9,8 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-io.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 607 pins.
-[INFO ODB-0131]     Created 8904 components and 66336 component-terminals.
-[INFO ODB-0133]     Created 9271 nets and 30468 connections.
+[INFO ODB-0131]     Created 8971 components and 66867 component-terminals.
+[INFO ODB-0133]     Created 9338 nets and 30739 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-io.def
 [WARNING TAP-0014] endcap_cpp option is deprecated.
 [INFO TAP-0001] Found 0 macro blocks.

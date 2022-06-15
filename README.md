@@ -1,3 +1,11 @@
+# Shooting game in Verilog
+An ASIC implementation of a game. Course project of EE 638 - Advanced VLSI Design at Bogazici University
+
+# Contributors
+
+* Mehmet Alp Şarkışla
+* Mehmet Fatih Gülakar
+
 # Caravel User Project
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)

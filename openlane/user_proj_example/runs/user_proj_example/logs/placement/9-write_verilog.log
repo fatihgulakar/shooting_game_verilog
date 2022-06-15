@@ -9,7 +9,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/placement/8-resizer.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 31576 components and 113588 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 82816 connections.
-[INFO ODB-0133]     Created 9297 nets and 30520 connections.
+[INFO ODB-0131]     Created 35203 components and 135479 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 97324 connections.
+[INFO ODB-0133]     Created 12924 nets and 37911 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/placement/8-resizer.def

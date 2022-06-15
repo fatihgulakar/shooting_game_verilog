@@ -1,0 +1,18 @@
+
+Input: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def
+Output: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.klayout.gds
+Design: user_project_wrapper
+Technology File: /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+GDS File List: ['/home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds', '/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/../../gds/user_proj_example.gds']
+LEF File: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/merged.lef
+
+[INFO] Clearing cells...
+[INFO] Merging GDS files...
+	/home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+	/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/../../gds/user_proj_example.gds
+[INFO] Copying toplevel cell 'user_project_wrapper'
+WARNING: no fill config file specified
+[INFO] Checking for missing GDS...
+[INFO] All LEF cells have matching GDS cells
+[INFO] Writing out GDS '/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.klayout.gds'
+[INFO] Done.

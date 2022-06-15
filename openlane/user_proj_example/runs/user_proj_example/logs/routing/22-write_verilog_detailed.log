@@ -10,7 +10,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0094] 		Created 100000 Insts
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 173519 components and 690396 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 650588 connections.
-[INFO ODB-0133]     Created 9396 nets and 39556 connections.
+[INFO ODB-0131]     Created 173999 components and 696983 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 652508 connections.
+[INFO ODB-0133]     Created 13132 nets and 44231 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def

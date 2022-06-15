@@ -11,27 +11,27 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0094] 		Created 100000 Insts
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 173519 components and 690396 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 650588 connections.
-[INFO ODB-0133]     Created 9396 nets and 39556 connections.
+[INFO ODB-0131]     Created 173999 components and 696983 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 652508 connections.
+[INFO ODB-0133]     Created 13132 nets and 44231 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def
 [INFO]: Setting RC values...
 [INFO RCX-0431] Defined process_corner X with ext_model_index 0
 [INFO RCX-0029] Defined extraction corner X
 [INFO RCX-0008] extracting parasitics of user_proj_example ...
-Notice 0: Split top of 4255 T shapes.
+Notice 0: Split top of 3899 T shapes.
 [INFO RCX-0435] Reading extraction model file /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/rcx_rules.info ...
 [INFO RCX-0436] RC segment generation user_proj_example (max_merge_res 50.0) ...
-[INFO RCX-0040] Final 60387 rc segments
+[INFO RCX-0040] Final 61039 rc segments
 [INFO RCX-0439] Coupling Cap extraction user_proj_example ...
 [INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
-[INFO RCX-0043] 83626 wires to be extracted
-[INFO RCX-0442] 25% completion -- 21359 wires have been extracted
-[INFO RCX-0442] 51% completion -- 43000 wires have been extracted
-[INFO RCX-0442] 57% completion -- 48367 wires have been extracted
-[INFO RCX-0442] 100% completion -- 83626 wires have been extracted
-[INFO RCX-0045] Extract 9396 nets, 69425 rsegs, 69425 caps, 102810 ccs
+[INFO RCX-0043] 91149 wires to be extracted
+[INFO RCX-0442] 22% completion -- 20647 wires have been extracted
+[INFO RCX-0442] 51% completion -- 46817 wires have been extracted
+[INFO RCX-0442] 55% completion -- 50680 wires have been extracted
+[INFO RCX-0442] 100% completion -- 91149 wires have been extracted
+[INFO RCX-0045] Extract 13132 nets, 73813 rsegs, 73813 caps, 113947 ccs
 [INFO RCX-0015] Finished extracting user_proj_example.
 [INFO RCX-0016] Writing SPEF ...
-[INFO RCX-0443] 9396 nets finished
+[INFO RCX-0443] 13132 nets finished
 [INFO RCX-0017] Finished writing SPEF ...

@@ -2,7 +2,7 @@ CVC: Log output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/u
 CVC: Error output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt.error.gz
 CVC: Debug output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt.debug.gz
 CVC: Circuit Validation Check  Version 1.1.0
-CVC: Start: Wed Jun 15 13:39:11 2022
+CVC: Start: Wed Jun 15 16:12:46 2022
 
 Using the following parameters for CVC (Circuit Validation Check) from /openlane/scripts/cvc/sky130A/cvcrc.sky130A
 CVC_TOP = 'user_proj_example'
@@ -46,16 +46,16 @@ End of parameters
 CVC: Reading device model settings...
 CVC: Reading power settings...
 CVC: Parsing netlist /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/user_proj_example.cdl
-Cdl fixed data size 2785145
-Usage CDL: Time: 0  Memory: 92244  I/O: 8  Swap: 0
+Cdl fixed data size 2820450
+Usage CDL: Time: 0  Memory: 93476  I/O: 200  Swap: 0
 CVC: Counting and linking...
 CVC: Assigning IDs ...
-Usage DB: Time: 1  Memory: 104840  I/O: 8  Swap: 0
-CVC: 173520(173520) instances, 34869(34869) nets, 289532(289532) devices.
+Usage DB: Time: 1  Memory: 106364  I/O: 200  Swap: 0
+CVC: 174000(174000) instances, 47466(47466) nets, 313404(313404) devices.
 CVC: Setting models ...
 Setting model tolerances...
 CVC: Shorting switches...
-	Shorted 504 short
+	Shorted 488 short
 Setting instance power...
 
 ModelList> filename /openlane/scripts/cvc/sky130A/cvc.sky130A.models
@@ -69,8 +69,8 @@ ModelList> filename /openlane/scripts/cvc/sky130A/cvc.sky130A.models
  Model> sky130_fd_pr__model__parasitic__diode_ps2dn         0 D->diode      Parameters> Diodes> 1-2
  Model> sky130_fd_pr__model__parasitic__diode_ps2nw         0 D->diode      Parameters> Diodes> 1-2
  Model> sky130_fd_pr__model__parasitic__diode_pw2dn         0 D->diode      Parameters> Diodes> 1-2
- Model> nfet_01v8     144514 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
- Model> pfet_01v8_hvt    144514 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
+ Model> nfet_01v8     156458 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
+ Model> pfet_01v8_hvt    156458 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
  Model> sky130_fd_bs_flash__special_sonosfet_star         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
  Model> sky130_fd_pr__esd_nfet_g5v0d10v5         0 M->nmos       Parameters> Vth=0.2 R=L/W*7000 Diodes> 4-1 4-3
  Model> sky130_fd_pr__nfet_01v8         0 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
@@ -85,7 +85,7 @@ ModelList> filename /openlane/scripts/cvc/sky130A/cvc.sky130A.models
  Model> sky130_fd_pr__special_nfet_latch         0 M->nmos       Parameters> Vth=0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 4-1 4-3
  Model> sky130_fd_pr__special_pfet_pass         0 M->pmos       Parameters> Vth=-0.2 Vds=1.8 Vgs=1.8 R=L/W*7000 Diodes> 1-4 3-4
  Model> sky130_fd_pr__pnp_05v5         0 Q->bipolar    Parameters>
- Model> short            504 R->switch_on  Parameters>
+ Model> short            488 R->switch_on  Parameters>
  Model> sky130_fd_pr__res_generic_m1         0 R->resistor   Parameters> R=l/w
  Model> sky130_fd_pr__res_generic_m2         0 R->resistor   Parameters> R=l/w
  Model> sky130_fd_pr__res_generic_m3         0 R->resistor   Parameters> R=l/w
@@ -481,14 +481,14 @@ wbs_sel_i[3:0]~>std_input input std_input
 Power List> end
 
 CVC: Linking devices...
-Usage EQUIV: Time: 1  Memory: 123164  I/O: 72  Swap: 0
+Usage EQUIV: Time: 1  Memory: 127600  I/O: 344  Swap: 0
 Power nets 377
 Hash dump:parameter->resistance map
-Contains 53 buckets, 59 elements
-Element count 0, 6
-Element count 1, 35
-Element count 2, 12
-Unused hash: 0.11, average depth 1.41
+Contains 53 buckets, 55 elements
+Element count 0, 7
+Element count 1, 37
+Element count 2, 9
+Unused hash: 0.13, average depth 1.33
 Hash dump:text->circuit map
 Contains 337 buckets, 438 elements
 Element count 0, 68
@@ -499,32 +499,32 @@ Element count 4, 6
 Element count 5, 1
 Unused hash: 0.20, average depth 2.01
 Hash dump:string->text map
-Contains 107897 buckets, 184302 elements
-Element count 0, 19561
-Element count 1, 33435
-Element count 2, 28407
-Element count 3, 16240
-Element count 4, 7040
-Element count 5, 2361
-Element count 6, 660
-Element count 7, 145
-Element count 8, 40
-Element count 9, 7
-Element count 10, 1
-Unused hash: 0.18, average depth 2.71
+Contains 107897 buckets, 188510 elements
+Element count 0, 18813
+Element count 1, 32837
+Element count 2, 28739
+Element count 3, 16649
+Element count 4, 7341
+Element count 5, 2512
+Element count 6, 785
+Element count 7, 167
+Element count 8, 43
+Element count 9, 9
+Element count 10, 2
+Unused hash: 0.17, average depth 2.75
 CVC: Shorting non conducting resistors...
 CVC: Calculating resistor voltages...
-Usage RES: Time: 1  Memory: 123164  I/O: 72  Swap: 0
+Usage RES: Time: 1  Memory: 127600  I/O: 480  Swap: 0
 Power nets 377
 CVC: Calculating min/max voltages...
-Processing trivial nets found 10368 trivial nets
+Processing trivial nets found 22783 trivial nets
 CVC: Ignoring invalid calculations...
 CVC:   Removed 0 calculations
 Copying master nets
 CVC: Ignoring non-conducting devices...
 CVC:   Ignored 0 devices
-Usage MIN/MAX1: Time: 1  Memory: 124280  I/O: 72  Swap: 0
-Power nets 12866
+Usage MIN/MAX1: Time: 1  Memory: 128704  I/O: 480  Swap: 0
+Power nets 12990
 ! Checking forward bias diode errors: 
 
 ! Checking nmos source/drain vs bias errors: 
@@ -535,23 +535,23 @@ Power nets 12866
 
 ! Checking pmos gate vs source errors: 
 
-Usage ERROR: Time: 1  Memory: 124280  I/O: 72  Swap: 0
+Usage ERROR: Time: 1  Memory: 128704  I/O: 480  Swap: 0
 CVC: Propagating Simulation voltages 1...
-Usage SIM1: Time: 1  Memory: 125600  I/O: 72  Swap: 0
-Power nets 12866
+Usage SIM1: Time: 1  Memory: 130288  I/O: 480  Swap: 0
+Power nets 12990
 CVC: Propagating Simulation voltages 3...
-Usage SIM2: Time: 1  Memory: 125864  I/O: 72  Swap: 0
-Power nets 12866
+Usage SIM2: Time: 1  Memory: 130816  I/O: 480  Swap: 0
+Power nets 12990
 Added 0 latch voltages
 CVC: Calculating min/max voltages...
-Processing trivial nets found 10368 trivial nets
+Processing trivial nets found 22783 trivial nets
 CVC: Ignoring invalid calculations...
 CVC:   Removed 0 calculations
 Copying master nets
 CVC: Ignoring non-conducting devices...
 CVC:   Ignored 0 devices
-Usage MIN/MAX2: Time: 1  Memory: 126920  I/O: 80  Swap: 0
-Power nets 25355
+Usage MIN/MAX2: Time: 1  Memory: 131608  I/O: 488  Swap: 0
+Power nets 25603
 ! Checking overvoltage errors
 
 ! Checking nmos possible leak errors: 
@@ -583,8 +583,8 @@ CVC: Overvoltage-VGS:       0
 CVC: Model errors:          0
 CVC: Unexpected voltage :   0
 CVC: Total:                 0
-Usage Total: Time: 1  Memory: 127444  I/O: 120  Swap: 0
-Virtual net update/access 345526/18394394
+Usage Total: Time: 1  Memory: 132132  I/O: 528  Swap: 0
+Virtual net update/access 401158/20716364
 CVC: Log output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt
-CVC: End: Wed Jun 15 13:39:13 2022
+CVC: End: Wed Jun 15 16:12:48 2022
 

@@ -71,12 +71,13 @@ module user_proj_example #(
     wire clk;
     wire rst;
 
-    wire [`MPRJ_IO_PADS-1:0] io_in;
-    wire [`MPRJ_IO_PADS-1:0] io_out;
-    wire [`MPRJ_IO_PADS-1:0] io_oeb;
+    wire [3:0] red   = io_out[8:5];
+    wire [3:0] green = io_out[12:9];
+    wire [3:0] blue  = io_out[16:13];
 
+    reg [16:0] io_out_d;
     // IO
-    assign io_out[37:13] = 0;
+    assign io_out[37:17] = 0;
     assign io_oeb[2:0] = 3'b111;
     assign io_oeb[37:3] = 0;
 
@@ -84,34 +85,27 @@ module user_proj_example #(
     assign irq = 3'b000;	// Unused
 
     // LA
-    assign la_data_out = {{(120){1'b0}}, red, green, blue};
-    // Assuming LA probes [63:32] are for controlling the count register  
+    assign la_data_out = {{(116){1'b0}}, red, green, blue};
 
     // Assuming LA probes [65:64] are for controlling the count clk & reset  
     assign clk = (~la_oenb[64]) ? la_data_in[64]: wb_clk_i;
     assign rst = (~la_oenb[65]) ? la_data_in[65]: wb_rst_i;
+
+    always@(posedge clk) begin
+        io_out[16:0] <= io_out_d[16:0];
+    end
     
-
-    wire ps2_data    = io_in[0];
-    wire ps2_clk     = io_in[1];
-    wire start       = io_in[2];
-    wire hsync       = io_out[3];
-    wire vsync       = io_out[4];
-    wire [2:0] red   = io_out[5 +: 3];
-    wire [2:0] green = io_out[8 +: 3];
-    wire [1:0] blue  = io_out[11 +: 2];
-
     main game(
-        .ps2_data   (ps2_data),
-        .ps2_clk    (ps2_clk),
+        .ps2_data   (io_in[0]),
+        .ps2_clk    (io_in[1]),
         .board_clk  (clk),
-        .start      (start),
+        .start      (io_in[2]),
         .reset      (rst),
-        .hsync      (hsync),
-        .vsync      (vsync),
-        .red        (red),
-        .green      (green),
-        .blue       (blue)
+        .hsync      (io_out_d[3]),
+        .vsync      (io_out_d[4]),
+        .red        (io_out_d[8:5]),
+        .green      (io_out_d[12:9]),
+        .blue       (io_out_d[16:13])
     );
 
 endmodule

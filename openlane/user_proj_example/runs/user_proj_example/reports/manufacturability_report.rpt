@@ -15,5 +15,5 @@ Total errors = 0
 
 Antenna Summary:
 Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/antenna.rpt
-Number of pins violated: 11
-Number of nets violated: 11
+Number of pins violated: 13
+Number of nets violated: 13

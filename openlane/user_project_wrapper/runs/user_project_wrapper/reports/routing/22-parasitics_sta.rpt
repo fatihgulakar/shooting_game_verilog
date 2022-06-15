@@ -1,0 +1,25 @@
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: wbs_adr_i[3] (input port clocked by user_clock2)
+Endpoint: mprj/wbs_adr_i[3] (internal pin)
+Path Group: (none)
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          2.00    2.00 ^ input external delay
+                  2.38    2.23    4.23 ^ wbs_adr_i[3] (in)
+     1    0.56                           wbs_adr_i[3] (net)
+                  3.35    0.00    4.23 ^ mprj/wbs_adr_i[3] (user_proj_example)
+                                  4.23   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.
