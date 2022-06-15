@@ -1,0 +1,20 @@
+OpenROAD 8d53e9b018dec98fa63e907ddeb6c5406f035361 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef
+[INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-initial_fp.def
+[INFO ODB-0128] Design: user_proj_example
+[INFO ODB-0130]     Created 607 pins.
+[INFO ODB-0131]     Created 8904 components and 66336 component-terminals.
+[INFO ODB-0133]     Created 9271 nets and 30468 connections.
+[INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-initial_fp.def
+Top-level design name: user_proj_example
+Warning: Some pins weren't matched by the config file
+Those are: ['irq[0]', 'irq[1]', 'irq[2]']
+Assigning random sides to the above pins
+Block boundaries: 0 0 1250000 1250000
+Writing /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-io.def...

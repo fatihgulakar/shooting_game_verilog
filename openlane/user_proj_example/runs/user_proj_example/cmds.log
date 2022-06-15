@@ -1,0 +1,156 @@
+Wed Jun 15 13:20:20 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -i /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Wed Jun 15 13:20:21 UTC 2022 - Executing "openroad -python /openlane/scripts/mergeLib.py --output /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/merged.lib --name sky130A_merged /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Wed Jun 15 13:20:21 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/trimmed.lib.exclude.list --output /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/trimmed.lib /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/merged.lib"
+
+Wed Jun 15 13:20:21 UTC 2022 - Executing "echo {openlane 2022.02.23_02.50.41} > /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/OPENLANE_VERSION"
+
+Wed Jun 15 13:20:21 UTC 2022 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/config.tracks"
+
+Wed Jun 15 13:20:22 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Wed Jun 15 13:20:22 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl -l /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/synthesis/1-synthesis.log |& tee >&@stdout"
+
+Wed Jun 15 13:22:04 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/synthesis\/user_proj_example.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:04 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:04 UTC 2022 - Executing "sed -i /defparam/d /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/synthesis/user_proj_example.v"
+
+Wed Jun 15 13:22:04 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl"
+
+Wed Jun 15 13:22:06 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl"
+
+Wed Jun 15 13:22:06 UTC 2022 - Executing "openroad -python /openlane/scripts/defutil.py extract_core_dims --output-data /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/dimensions.txt --input-lef /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-initial_fp.def"
+
+Wed Jun 15 13:22:07 UTC 2022 - Executing "openroad -python /openlane/scripts/io_place.py --input-lef /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef --config /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension -1 --ver-extension -1 --length 4 -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-io.def /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-initial_fp.def |& tee /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/4-place_io_ol.log >&@stdout"
+
+Wed Jun 15 13:22:08 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl"
+
+Wed Jun 15 13:22:08 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl"
+
+Wed Jun 15 13:22:12 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/replace.tcl"
+
+Wed Jun 15 13:22:21 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl"
+
+Wed Jun 15 13:22:29 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:22:29 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/placement\/user_proj_example.resized.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:29 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/synthesis\/user_proj_example.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:29 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/opendp.tcl"
+
+Wed Jun 15 13:22:30 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts/cts.lib.exclude.list --output /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts/cts.lib /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Wed Jun 15 13:22:31 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl"
+
+Wed Jun 15 13:22:48 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:22:49 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/cts\/user_proj_example.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:49 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/placement\/user_proj_example.resized.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:49 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl"
+
+Wed Jun 15 13:22:57 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:22:58 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/cts\/user_proj_example.resized.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:58 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/cts\/user_proj_example.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:22:58 UTC 2022 - Executing "openroad -python /openlane/scripts/place_diodes.py -l /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef -id /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts/13-resizer_timing.def -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/15-diodes.def --diode-cell sky130_fd_sc_hd__diode_2 --diode-pin DIODE --fake-diode-cell sky130_fd_sc_hd__diode_2 |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/routing/15-diodes.log"
+
+Wed Jun 15 13:22:59 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/opendp.tcl"
+
+Wed Jun 15 13:23:00 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:23:01 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/synthesis\/user_proj_example_diodes.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:23:01 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/cts\/user_proj_example.resized.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:23:01 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl"
+
+Wed Jun 15 13:23:03 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl"
+
+Wed Jun 15 13:23:11 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:23:12 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/tmp\/routing\/19-global.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:23:12 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/synthesis\/user_proj_example_diodes.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:23:12 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/droute.tcl"
+
+Wed Jun 15 13:26:30 UTC 2022 - Executing "openroad -python /openlane/scripts/tr_drc_to_klayout_drc.py -i /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/routing/detailed.drc -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/routing/detailed.klayout.xml --design-name user_proj_example"
+
+Wed Jun 15 13:26:30 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:26:32 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/tmp\/routing\/21-detailed.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:26:32 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/tmp\/routing\/19-global.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:26:32 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl"
+
+Wed Jun 15 13:26:38 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl"
+
+Wed Jun 15 13:26:44 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl"
+
+Wed Jun 15 13:26:51 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl"
+
+Wed Jun 15 13:26:58 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta_multi_corner.tcl"
+
+Wed Jun 15 13:27:13 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openlane/scripts/magic/mag_gds.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/28-gdsii.log"
+
+Wed Jun 15 13:27:26 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openlane/scripts/magic/gds_pointers.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/28-gds_ptrs.log"
+
+Wed Jun 15 13:27:38 UTC 2022 - Executing "sed -i -n {/^<< properties >>/,/^<< end >>/p} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/gds_ptrs.mag"
+
+Wed Jun 15 13:27:38 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openlane/scripts/magic/lef.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/28-lef.log"
+
+Wed Jun 15 13:28:26 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openlane/scripts/magic/maglef.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/28-maglef.log"
+
+Wed Jun 15 13:28:27 UTC 2022 - Executing "klayout -b -rm /openlane/scripts/klayout/def2gds.py -rd out_gds=/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.klayout.gds -rd tech_file=/home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/klayout/sky130A.lyt -rd design_name=user_proj_example -rd in_def=/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def -rd {in_gds=/home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds } -rd config_file= -rd seal_gds= -rd lef_file=/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/29-gdsii-klayout.log"
+
+Wed Jun 15 13:28:30 UTC 2022 - Executing "bash /openlane/scripts/klayout/xor.sh /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.gds /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.klayout.gds user_proj_example /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.xor.gds |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/30-xor.log"
+
+Wed Jun 15 13:29:41 UTC 2022 - Executing "openroad -python /openlane/scripts/parse_klayout_xor_log.py -l /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/30-xor.log -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/30-xor.rpt"
+
+Wed Jun 15 13:29:41 UTC 2022 - Executing "bash /openlane/scripts/klayout/xor.sh /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.gds /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.klayout.gds user_proj_example /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.xor.xml |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/30-xor.log"
+
+Wed Jun 15 13:30:51 UTC 2022 - Executing "openroad -python /openlane/scripts/parse_klayout_xor_log.py -l /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/30-xor.log -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/30-xor.rpt"
+
+Wed Jun 15 13:30:51 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/spice.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/31-spice.log"
+
+Wed Jun 15 13:33:26 UTC 2022 - Executing "openroad -python /openlane/scripts/write_powered_def.py -d /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def -l /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef --power-port vccd1 --ground-port vssd1 --powered-netlist {} -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/31-powered_def.def |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/32-write_powered_def.log"
+
+Wed Jun 15 13:33:31 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Wed Jun 15 13:33:33 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/tmp\/finishing\/31-powered_netlist.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:33:33 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/home\/fatihgulakar\/638_proje\/shooting_game_verilog\/openlane\/user_proj_example\/runs\/user_proj_example\/tmp\/routing\/21-detailed.v/} /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Wed Jun 15 13:33:33 UTC 2022 - Executing "netgen -batch source /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/34-setup_file.lef.lvs |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/34-lef.log"
+
+Wed Jun 15 13:33:53 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openlane/scripts/magic/drc.tcl </dev/null |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/35-drc.log"
+
+Wed Jun 15 13:39:08 UTC 2022 - Executing "openroad -python /openlane/scripts/magic_drc_to_tcl.py -i /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rpt -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.tcl"
+
+Wed Jun 15 13:39:08 UTC 2022 - Executing "openroad -python /openlane/scripts/magic_drc_to_tr_drc.py -i /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rpt -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.tr"
+
+Wed Jun 15 13:39:08 UTC 2022 - Executing "openroad -python /openlane/scripts/tr_drc_to_klayout_drc.py -i /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.tr -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.klayout.xml --design-name user_proj_example"
+
+Wed Jun 15 13:39:08 UTC 2022 - Executing "openroad -python /openlane/scripts/magic_drc_to_rdb.py --magic_drc_in /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rpt --rdb_out /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rdb"
+
+Wed Jun 15 13:39:08 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/antenna_check.tcl"
+
+Wed Jun 15 13:39:11 UTC 2022 - Executing "awk -v vdd=vccd1 -v gnd=vssd1 -f /openlane/scripts/cvc/sky130A/power.awk /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/31-powered_netlist.v > /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/user_proj_example.power"
+
+Wed Jun 15 13:39:11 UTC 2022 - Executing "awk -f /openlane/scripts/cvc/sky130A/cdl.awk /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.lef.spice > /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/user_proj_example.cdl"
+
+Wed Jun 15 13:39:11 UTC 2022 - Executing "cvc /openlane/scripts/cvc/sky130A/cvcrc.sky130A |& tee >&@stdout /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/37-erc_screen.log"
+
+Wed Jun 15 13:39:14 UTC 2022 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example --design_name user_proj_example --tag user_proj_example --output_file /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv --man_report /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/manufacturability_report.rpt --run_path /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example"
+
+Wed Jun 15 13:39:15 UTC 2022 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example --design_name user_proj_example --tag user_proj_example --output_file /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv --man_report /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/manufacturability_report.rpt --run_path /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example"
+

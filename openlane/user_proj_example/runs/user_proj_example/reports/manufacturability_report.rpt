@@ -1,0 +1,19 @@
+Design Name: user_proj_example
+Run Directory: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/34-user_proj_example.lvs.lef.log
+LVS reports no net, device, pin, or property mismatches.
+Total errors = 0
+----------------------------------------
+
+Antenna Summary:
+Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/antenna.rpt
+Number of pins violated: 11
+Number of nets violated: 11

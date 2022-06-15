@@ -1,0 +1,17 @@
+
+Input: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/routing/user_proj_example.def
+Output: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.klayout.gds
+Design: user_proj_example
+Technology File: /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+GDS File List: ['/home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds']
+LEF File: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef
+
+[INFO] Clearing cells...
+[INFO] Merging GDS files...
+	/home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+[INFO] Copying toplevel cell 'user_proj_example'
+WARNING: no fill config file specified
+[INFO] Checking for missing GDS...
+[INFO] All LEF cells have matching GDS cells
+[INFO] Writing out GDS '/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/finishing/user_proj_example.klayout.gds'
+[INFO] Done.
