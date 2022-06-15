@@ -155,7 +155,7 @@ module color_generator(
     if(reset) begin
       game_state  <= menu_main;
       p1_moving <= 0;
-      p1_dir      <= 0;  
+      p1_dir      <= 2'b00;  //00
       p1_x        <= window_w-180;
       p1_y        <= window_h-80;
       b1_fired    <= 0;
@@ -167,7 +167,7 @@ module color_generator(
         
             
       p2_moving <= 0;
-      p2_dir      <= 1;
+      p2_dir      <= 2'b01;//01
       p2_x        <= 140;
       p2_y        <= 40;
       b2_fired    <= 0;
@@ -179,8 +179,36 @@ module color_generator(
       if(game_state == menu_main) begin
         if(start) begin
           game_state <= game_running;
-        end
+        end        
       end
+      
+      if(game_state == menu_win_p2 || game_state == menu_win_p1) begin
+        if(start) begin
+          p1_moving <= 0; // asagidaki karakter
+          p1_dir      <= 2'b00;  //00
+          p1_x        <= window_w-180;
+          p1_y        <= window_h-80;
+          b1_fired    <= 0;
+          b1_dir      <= 0;
+          b1_x        <= 0;
+          b1_y        <= 0;
+          
+          p1_health   <= 2;
+            
+                
+          p2_moving <= 0; // yukaridaki karakter
+          p2_dir      <= 2'b01;//01
+          p2_x        <= 140;
+          p2_y        <= 40;
+          b2_fired    <= 0;
+          b2_dir      <= 0;
+          b2_x        <= 0;
+          b2_y        <= 0;
+          p2_health   <= 2;
+          game_state <= game_running;
+        end        
+      end
+      
 
       // game running
       if(game_state == game_running) begin
@@ -188,19 +216,19 @@ module color_generator(
         // p1
         if (up_1) begin
           p1_moving <= 1;
-          p1_dir    <= 0; 
+          p1_dir    <= 2'b00; 
           p1_y      <= p1_y - p_vel;
         end else if (down_1) begin
           p1_moving <= 1;
-          p1_dir    <= 1;
+          p1_dir    <= 2'b01;
           p1_y      <= p1_y + p_vel;
         end else if (left_1) begin
           p1_moving <= 1;
-          p1_dir    <= 2;
+          p1_dir    <= 2'b10;
           p1_x      <= p1_x - p_vel;
         end else if (right_1) begin
           p1_moving <= 1;
-          p1_dir    <= 3;
+          p1_dir    <= 2'b11;
           p1_x      <= p1_x + p_vel;
         end else begin
           p1_moving <= 0;
@@ -208,19 +236,19 @@ module color_generator(
         // p2
         if (up_2) begin
           p2_moving <= 1;
-          p2_dir    <= 0;
+          p2_dir    <= 2'b00;
           p2_y      <= p2_y - p_vel;
         end else if (down_2) begin
           p2_moving <= 1;
-          p2_dir    <= 1;
+          p2_dir    <= 2'b01;
           p2_y      <= p2_y + p_vel;
         end else if (left_2) begin
           p2_moving <= 1;
-          p2_dir    <= 2;
+          p2_dir    <= 2'b10;
           p2_x      <= p2_x - p_vel;
         end else if (right_2) begin
           p2_moving <= 1;
-          p2_dir    <= 3;
+          p2_dir    <= 2'b11;
           p2_x      <= p2_x + p_vel;
         end else begin
           p2_moving <= 0;
@@ -369,6 +397,7 @@ module color_generator(
         if(p2_health == 0) begin
           game_state <= menu_win_p1;
         end
+        
       end
     end
   end
@@ -398,7 +427,7 @@ module color_generator(
   assign obj_b1_y = row - b1_y;
   assign obj_b2_y = row - b2_y;
   obj_p obj_p1(.x(obj_p1_x[5:0]), .y(obj_p1_y[5:0]), .dir(p1_dir), .en(p1_en), .data(p1_data));
-  obj_b obj_b1(.x(obj_p1_y[2:0]), .y(obj_b1_y[2:0]) ,  .en(b1_en), .data(b1_data));
+  obj_b obj_b1(.x(obj_b1_x[2:0]), .y(obj_b1_y[2:0]) ,  .en(b1_en), .data(b1_data));
   obj_p obj_p2(.x(obj_p2_x[5:0]), .y(obj_p2_y[5:0]), .dir(p2_dir), .en(p2_en), .data(p2_data));
   obj_b obj_b2(.x(obj_b2_x[2:0]), .y(obj_b2_y[2:0]),  .en(b2_en), .data(b2_data));
 
@@ -457,9 +486,9 @@ module color_generator(
   always @(*) begin
     case(sel_pix)
       // menu
-      px_menu_main: pix = color_green;
+      px_menu_main: pix = color_brown;
       px_menu_p1: pix = color_blue;
-      px_menu_p2: pix = color_red;
+      px_menu_p2: pix = color_green;
       // health bars
       px_game_h11: pix = p1_h_data[0] ? color_red : color_gray;
       px_game_h12: pix = p1_h_data[1] ? color_red : color_gray;
@@ -484,7 +513,7 @@ module color_generator(
       end
       // bullets
       px_game_b1: pix = b1_data ? color_blue : color_gray;
-      px_game_b2: pix = b2_data ? color_black  :color_gray;
+      px_game_b2: pix = b2_data ? color_green  :color_gray;
       // background
       px_game_bg: pix = color_gray;
       default: pix = color_gray;

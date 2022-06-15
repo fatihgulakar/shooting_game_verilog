@@ -22,14 +22,15 @@ module main(
   wire        disp_en;
   wire [4:0]  p1_control; 
   wire [4:0]  p2_control;
+  wire db_start, db_reset;
 
   color_generator color(
     .game_clk   (game_clk),
     .disp_en    (disp_en),
     .p1_control (p1_control),
     .p2_control (p2_control),
-    .start      (start),
-    .reset      (reset),
+    .start      (db_start),
+    .reset      (db_reset),
     .column     (column),
     .row        (row),
     .red        (red[3:1]),
@@ -43,11 +44,17 @@ module main(
   //  output wire [2:0] red,
   //   output wire [2:0] green,
   //   output wire [1:0] blue
-   
+  debouncer debounce(
+    .clk(board_clk),
+    .I0(start),
+    .I1(reset),
+    .O0(db_start),
+    .O1(db_reset)
+); 
 
   sync_generator sync(
     .vga_clk (vga_clk),
-    .reset   (reset),
+    .reset   (db_reset),
     .disp_en (disp_en),
     .hsync   (hsync),
     .vsync   (vsync),
@@ -58,7 +65,7 @@ module main(
   kb2game keyb(
     .board_clk (board_clk),
     .ps2_clk (ps2_clk),
-    .reset (reset),
+    .reset (db_reset),
     .ps2_data (ps2_data),
     .p1(p1_control),
     .p2(p2_control)
@@ -68,7 +75,7 @@ module main(
     21
   ) freq_21(
     .in_clk (board_clk),
-    .reset   (reset),
+    .reset   (db_reset),
     .out_clk (game_clk)
   );
 
@@ -77,7 +84,7 @@ module main(
     2
   ) freq_2(
     .in_clk (board_clk),
-    .reset   (reset),
+    .reset   (db_reset),
     .out_clk (vga_clk)
   );
 

@@ -4,6 +4,7 @@ vivado/*
 *.ip_user_files
 *.runs
 *.sim
+*.cache
 
 designs/**/bd/**
 !designs/**/bd/*.bd
