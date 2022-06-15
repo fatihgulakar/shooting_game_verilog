@@ -3,15 +3,15 @@
 
 === user_proj_example ===
 
-   Number of wires:              12398
-   Number of wire bits:          13430
+   Number of wires:              12395
+   Number of wire bits:          13427
    Number of public wires:          79
    Number of public wire bits:    1031
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              12780
-     $_ANDNOT_                    3657
+   Number of cells:              12777
+     $_ANDNOT_                    3658
      $_AND_                        296
      $_DFFE_NN_                      8
      $_DFFE_NP_                      1
@@ -24,16 +24,16 @@
      $_DFF_PP0_                    233
      $_DFF_PP1_                     22
      $_DFF_P_                        2
-     $_MUX_                       2888
+     $_MUX_                       2887
      $_NAND_                       443
-     $_NOR_                        507
-     $_NOT_                        453
-     $_ORNOT_                      580
+     $_NOR_                        508
+     $_NOT_                        455
+     $_ORNOT_                      579
      $_OR_                        1927
      $_SDFFCE_NN0P_                  4
      $_SDFFE_PN0P_                  16
      $_SDFFE_PN1P_                   4
      $_SDFF_PN0_                     8
-     $_XNOR_                       164
-     $_XOR_                       1447
+     $_XNOR_                       162
+     $_XOR_                       1444
 

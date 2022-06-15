@@ -9,7 +9,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/cts/user_proj_example.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 35299 components and 136055 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 97708 connections.
-[INFO ODB-0133]     Created 13020 nets and 38103 connections.
+[INFO ODB-0131]     Created 34261 components and 129887 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 93556 connections.
+[INFO ODB-0133]     Created 11982 nets and 36087 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/results/cts/user_proj_example.def

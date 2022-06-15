@@ -9,7 +9,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/15-diodes.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 41315 components and 166247 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 121772 connections.
-[INFO ODB-0133]     Created 13132 nets and 44231 connections.
+[INFO ODB-0131]     Created 42774 components and 172553 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 127608 connections.
+[INFO ODB-0133]     Created 12083 nets and 44701 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/15-diodes.def

@@ -9,20 +9,20 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/placement/8-resizer.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 35203 components and 135479 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 97324 connections.
-[INFO ODB-0133]     Created 12924 nets and 37911 connections.
+[INFO ODB-0131]     Created 34212 components and 129593 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 93360 connections.
+[INFO ODB-0133]     Created 11933 nets and 35989 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/placement/8-resizer.def
 Placement Analysis
 ---------------------------------
 total displacement          0.0 u
 average displacement        0.0 u
 max displacement            0.0 u
-original HPWL          624824.2 u
-legalized HPWL         634731.7 u
-delta HPWL                    2 %
+original HPWL          614679.5 u
+legalized HPWL         622986.5 u
+delta HPWL                    1 %
 
-[INFO DPL-0020] Mirrored 6189 instances
-[INFO DPL-0021] HPWL before          634731.7 u
-[INFO DPL-0022] HPWL after           624824.2 u
-[INFO DPL-0023] HPWL delta               -1.6 %
+[INFO DPL-0020] Mirrored 5364 instances
+[INFO DPL-0021] HPWL before          622986.5 u
+[INFO DPL-0022] HPWL after           614679.5 u
+[INFO DPL-0023] HPWL delta               -1.3 %

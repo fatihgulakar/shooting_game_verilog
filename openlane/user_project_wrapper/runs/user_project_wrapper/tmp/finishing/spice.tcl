@@ -26,6 +26,6 @@ extract
 
 ext2spice lvs
 ext2spice -o /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.spice user_project_wrapper.ext
-feedback save /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/27-ext2spice.feedback.txt
+feedback save /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/26-ext2spice.feedback.txt
 # exec cp user_project_wrapper.spice /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.spice
 

@@ -15,7 +15,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/placement/user_project_wrapper.def
 ###############################################################################
 # Created by write_sdc
-# Wed Jun 15 15:41:07 2022
+# Wed Jun 15 16:46:46 2022
 ###############################################################################
 current_design user_project_wrapper
 ###############################################################################
@@ -2220,7 +2220,7 @@ set_max_fanout 5.0000 [current_design]
 [WARNING GRT-0040] Net vssd2 has wires outside die area.
 [WARNING GRT-0040] Net vssd2 has wires outside die area.
 [WARNING GRT-0040] Net vssd2 has wires outside die area.
-[INFO GRT-0004] Blockages: 706
+[INFO GRT-0004] Blockages: 705
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
@@ -2230,27 +2230,27 @@ li1        Vertical            0             0          0.00%
 met1       Horizontal    4314600       2559733          40.67%
 met2       Vertical      3235950       1830684          43.43%
 met3       Horizontal    2157300       1283104          40.52%
-met4       Vertical      1510110        690676          54.26%
+met4       Vertical      1510110        706516          53.21%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 2096
+[INFO GRT-0197] Via related to pin nodes: 2086
 [INFO GRT-0198] Via related Steiner nodes: 0
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 3204
-[INFO GRT-0112] Final usage 3D: 187866
+[INFO GRT-0111] Final number of vias: 3190
+[INFO GRT-0112] Final usage 3D: 187708
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 li1                  0             0            0.00%             0 /  0 /  0
-met1           2559733         46991            1.84%             0 /  0 /  0
-met2           1830684        131095            7.16%             0 /  0 /  0
+met1           2559733         46806            1.83%             0 /  0 /  0
+met2           1830684        131164            7.16%             0 /  0 /  0
 met3           1283104           168            0.01%             0 /  0 /  0
-met4            690676             0            0.00%             0 /  0 /  0
+met4            706516             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total          6364197        178254            2.80%             0 /  0 /  0
+Total          6380037        178138            2.79%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 1265294 um
+[INFO GRT-0018] Total wirelength: 1264494 um
 [INFO GRT-0014] Routed nets: 607
 [INFO]: Setting RC values...
 min_report
@@ -2304,13 +2304,13 @@ max slew
 Pin                                    Limit    Slew   Slack
 ------------------------------------------------------------
 wbs_stb_i                               1.50    1.77   -0.27 (VIOLATED)
-wb_rst_i                                1.50    1.76   -0.26 (VIOLATED)
 wb_clk_i                                1.50    1.76   -0.26 (VIOLATED)
+wb_rst_i                                1.50    1.76   -0.26 (VIOLATED)
 wbs_cyc_i                               1.50    1.75   -0.25 (VIOLATED)
+wbs_adr_i[0]                            1.50    1.75   -0.25 (VIOLATED)
 wbs_adr_i[1]                            1.50    1.75   -0.25 (VIOLATED)
 wbs_dat_i[0]                            1.50    1.75   -0.25 (VIOLATED)
 wbs_we_i                                1.50    1.74   -0.24 (VIOLATED)
-wbs_adr_i[0]                            1.50    1.74   -0.24 (VIOLATED)
 wbs_sel_i[0]                            1.50    1.74   -0.24 (VIOLATED)
 wbs_dat_i[1]                            1.50    1.74   -0.24 (VIOLATED)
 wbs_sel_i[1]                            1.50    1.74   -0.24 (VIOLATED)
@@ -2321,50 +2321,50 @@ wbs_sel_i[2]                            1.50    1.73   -0.23 (VIOLATED)
 wbs_dat_i[3]                            1.50    1.72   -0.23 (VIOLATED)
 wbs_sel_i[3]                            1.50    1.72   -0.22 (VIOLATED)
 wbs_adr_i[4]                            1.50    1.71   -0.22 (VIOLATED)
-io_in[37]                               1.50    1.71   -0.22 (VIOLATED)
 wbs_dat_i[4]                            1.50    1.71   -0.21 (VIOLATED)
+wbs_adr_i[5]                            1.50    1.71   -0.21 (VIOLATED)
 wbs_adr_i[6]                            1.50    1.70   -0.20 (VIOLATED)
 wbs_adr_i[8]                            1.50    1.70   -0.20 (VIOLATED)
 wbs_adr_i[7]                            1.50    1.70   -0.20 (VIOLATED)
+io_in[37]                               1.50    1.70   -0.20 (VIOLATED)
 wbs_dat_i[6]                            1.50    1.70   -0.20 (VIOLATED)
-wbs_adr_i[5]                            1.50    1.70   -0.20 (VIOLATED)
 wbs_dat_i[5]                            1.50    1.69   -0.20 (VIOLATED)
 wbs_adr_i[10]                           1.50    1.69   -0.19 (VIOLATED)
-wbs_dat_i[8]                            1.50    1.69   -0.19 (VIOLATED)
 wbs_dat_i[7]                            1.50    1.69   -0.19 (VIOLATED)
+wbs_dat_i[8]                            1.50    1.69   -0.19 (VIOLATED)
 wbs_dat_i[10]                           1.50    1.69   -0.19 (VIOLATED)
 wbs_adr_i[11]                           1.50    1.68   -0.19 (VIOLATED)
 wbs_dat_i[9]                            1.50    1.68   -0.18 (VIOLATED)
 wbs_dat_i[11]                           1.50    1.68   -0.18 (VIOLATED)
 wbs_adr_i[12]                           1.50    1.68   -0.18 (VIOLATED)
-io_in[36]                               1.50    1.68   -0.18 (VIOLATED)
 wbs_adr_i[9]                            1.50    1.67   -0.18 (VIOLATED)
 wbs_dat_i[12]                           1.50    1.67   -0.18 (VIOLATED)
 wbs_adr_i[13]                           1.50    1.67   -0.17 (VIOLATED)
 wbs_dat_i[13]                           1.50    1.67   -0.17 (VIOLATED)
-wbs_dat_i[15]                           1.50    1.66   -0.16 (VIOLATED)
 wbs_adr_i[15]                           1.50    1.66   -0.16 (VIOLATED)
+io_in[36]                               1.50    1.65   -0.16 (VIOLATED)
 wbs_adr_i[14]                           1.50    1.65   -0.16 (VIOLATED)
+wbs_dat_i[15]                           1.50    1.65   -0.15 (VIOLATED)
 wbs_adr_i[16]                           1.50    1.65   -0.15 (VIOLATED)
-wbs_dat_i[17]                           1.50    1.64   -0.15 (VIOLATED)
 wbs_dat_i[14]                           1.50    1.64   -0.15 (VIOLATED)
+wbs_dat_i[17]                           1.50    1.64   -0.15 (VIOLATED)
 wbs_adr_i[18]                           1.50    1.64   -0.14 (VIOLATED)
 wbs_dat_i[18]                           1.50    1.64   -0.14 (VIOLATED)
 wbs_adr_i[19]                           1.50    1.64   -0.14 (VIOLATED)
 wbs_dat_i[16]                           1.50    1.63   -0.14 (VIOLATED)
-wbs_adr_i[17]                           1.50    1.63   -0.14 (VIOLATED)
+wbs_adr_i[17]                           1.50    1.63   -0.13 (VIOLATED)
 wbs_dat_i[19]                           1.50    1.63   -0.13 (VIOLATED)
 wbs_adr_i[20]                           1.50    1.63   -0.13 (VIOLATED)
 wbs_dat_i[20]                           1.50    1.62   -0.12 (VIOLATED)
 wbs_adr_i[22]                           1.50    1.61   -0.11 (VIOLATED)
 wbs_adr_i[21]                           1.50    1.61   -0.11 (VIOLATED)
 wbs_dat_i[22]                           1.50    1.61   -0.11 (VIOLATED)
-wbs_dat_i[21]                           1.50    1.61   -0.11 (VIOLATED)
 wbs_dat_i[23]                           1.50    1.61   -0.11 (VIOLATED)
 wbs_adr_i[23]                           1.50    1.60   -0.11 (VIOLATED)
-io_in[35]                               1.50    1.60   -0.11 (VIOLATED)
+wbs_dat_i[21]                           1.50    1.60   -0.10 (VIOLATED)
 wbs_dat_i[24]                           1.50    1.60   -0.10 (VIOLATED)
 wbs_adr_i[24]                           1.50    1.59   -0.10 (VIOLATED)
+io_in[35]                               1.50    1.59   -0.10 (VIOLATED)
 wbs_dat_i[25]                           1.50    1.59   -0.09 (VIOLATED)
 wbs_dat_i[26]                           1.50    1.59   -0.09 (VIOLATED)
 wbs_adr_i[25]                           1.50    1.58   -0.08 (VIOLATED)
@@ -2375,8 +2375,8 @@ wbs_dat_i[28]                           1.50    1.57   -0.07 (VIOLATED)
 wbs_adr_i[27]                           1.50    1.57   -0.07 (VIOLATED)
 wbs_dat_i[29]                           1.50    1.56   -0.07 (VIOLATED)
 wbs_dat_i[30]                           1.50    1.56   -0.06 (VIOLATED)
-wbs_adr_i[29]                           1.50    1.56   -0.06 (VIOLATED)
 wbs_adr_i[30]                           1.50    1.56   -0.06 (VIOLATED)
+wbs_adr_i[29]                           1.50    1.56   -0.06 (VIOLATED)
 wbs_dat_i[31]                           1.50    1.55   -0.05 (VIOLATED)
 wbs_adr_i[31]                           1.50    1.54   -0.04 (VIOLATED)
 la_oenb[0]                              1.50    1.54   -0.04 (VIOLATED)
@@ -2387,12 +2387,11 @@ la_data_in[1]                           1.50    1.53   -0.03 (VIOLATED)
 la_data_in[3]                           1.50    1.53   -0.03 (VIOLATED)
 la_oenb[3]                              1.50    1.53   -0.03 (VIOLATED)
 la_data_in[2]                           1.50    1.52   -0.02 (VIOLATED)
+la_oenb[4]                              1.50    1.51   -0.01 (VIOLATED)
 la_data_in[4]                           1.50    1.51   -0.01 (VIOLATED)
 la_data_in[5]                           1.50    1.51   -0.01 (VIOLATED)
 la_oenb[5]                              1.50    1.51   -0.01 (VIOLATED)
-la_oenb[6]                              1.50    1.51   -0.01 (VIOLATED)
-io_in[34]                               1.50    1.50   -0.01 (VIOLATED)
-la_oenb[4]                              1.50    1.50   -0.01 (VIOLATED)
+la_oenb[6]                              1.50    1.50   -0.01 (VIOLATED)
 la_oenb[7]                              1.50    1.50   -0.00 (VIOLATED)
 la_data_in[6]                           1.50    1.50   -0.00 (VIOLATED)
 
@@ -2415,12 +2414,12 @@ wbs_adr_i[2]                            0.33    0.39   -0.06 (VIOLATED)
 wbs_dat_i[2]                            0.33    0.39   -0.06 (VIOLATED)
 wbs_adr_i[3]                            0.33    0.39   -0.06 (VIOLATED)
 wbs_sel_i[2]                            0.33    0.39   -0.06 (VIOLATED)
-io_in[37]                               0.33    0.39   -0.06 (VIOLATED)
 wbs_dat_i[3]                            0.33    0.39   -0.06 (VIOLATED)
 wbs_sel_i[3]                            0.33    0.39   -0.06 (VIOLATED)
 wbs_adr_i[4]                            0.33    0.39   -0.05 (VIOLATED)
 wbs_dat_i[4]                            0.33    0.39   -0.05 (VIOLATED)
 wbs_adr_i[5]                            0.33    0.38   -0.05 (VIOLATED)
+io_in[37]                               0.33    0.38   -0.05 (VIOLATED)
 wbs_dat_i[5]                            0.33    0.38   -0.05 (VIOLATED)
 wbs_dat_i[6]                            0.33    0.38   -0.05 (VIOLATED)
 wbs_adr_i[6]                            0.33    0.38   -0.05 (VIOLATED)
@@ -2435,12 +2434,12 @@ wbs_dat_i[10]                           0.33    0.38   -0.05 (VIOLATED)
 wbs_adr_i[11]                           0.33    0.38   -0.04 (VIOLATED)
 wbs_dat_i[11]                           0.33    0.38   -0.04 (VIOLATED)
 wbs_adr_i[12]                           0.33    0.37   -0.04 (VIOLATED)
-io_in[36]                               0.33    0.37   -0.04 (VIOLATED)
 wbs_dat_i[12]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_adr_i[13]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_dat_i[13]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_adr_i[14]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_dat_i[14]                           0.33    0.37   -0.04 (VIOLATED)
+io_in[36]                               0.33    0.37   -0.04 (VIOLATED)
 wbs_dat_i[15]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_adr_i[15]                           0.33    0.37   -0.04 (VIOLATED)
 wbs_dat_i[16]                           0.33    0.37   -0.04 (VIOLATED)
@@ -2456,12 +2455,12 @@ wbs_adr_i[21]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[20]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[21]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_adr_i[22]                           0.33    0.36   -0.03 (VIOLATED)
-io_in[35]                               0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[22]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[23]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_adr_i[23]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[24]                           0.33    0.36   -0.03 (VIOLATED)
 wbs_adr_i[24]                           0.33    0.36   -0.03 (VIOLATED)
+io_in[35]                               0.33    0.36   -0.03 (VIOLATED)
 wbs_dat_i[25]                           0.33    0.36   -0.02 (VIOLATED)
 wbs_adr_i[25]                           0.33    0.36   -0.02 (VIOLATED)
 wbs_adr_i[26]                           0.33    0.35   -0.02 (VIOLATED)
@@ -2489,17 +2488,17 @@ la_data_in[5]                           0.33    0.34   -0.01 (VIOLATED)
 la_oenb[4]                              0.33    0.34   -0.01 (VIOLATED)
 la_oenb[5]                              0.33    0.34   -0.01 (VIOLATED)
 la_data_in[6]                           0.33    0.34   -0.01 (VIOLATED)
-io_in[34]                               0.33    0.34   -0.01 (VIOLATED)
 la_data_in[7]                           0.33    0.34   -0.00 (VIOLATED)
 la_oenb[6]                              0.33    0.34   -0.00 (VIOLATED)
 la_oenb[7]                              0.33    0.33   -0.00 (VIOLATED)
 la_data_in[8]                           0.33    0.33   -0.00 (VIOLATED)
+io_in[34]                               0.33    0.33   -0.00 (VIOLATED)
 la_oenb[8]                              0.33    0.33   -0.00 (VIOLATED)
 la_data_in[9]                           0.33    0.33   -0.00 (VIOLATED)
 
 
 ===========================================================================
-max slew violation count 92
+max slew violation count 91
 max fanout violation count 0
 max cap violation count 96
 ============================================================================

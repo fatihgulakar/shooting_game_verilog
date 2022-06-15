@@ -43,7 +43,7 @@ LEF read, Line 286 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF 
 LEF read: Processed 792 lines.
 Reading LEF data from file /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/../../lef/user_proj_example.lef.
 This action cannot be undone.
-LEF read: Processed 5653 lines.
+LEF read: Processed 5652 lines.
 user_project_wrapper: 10000 rects
 user_project_wrapper: 20000 rects
 user_project_wrapper: 30000 rects

@@ -75,11 +75,13 @@ module user_proj_example #(
     wire [3:0] green = io_out[12:9];
     wire [3:0] blue  = io_out[16:13];
 
-    reg [16:0] io_out_d;
+    wire [16:0] io_out_d;
     // IO
     assign io_out[37:17] = 0;
+    assign io_out[2:0] = 3'd0;
     assign io_oeb[2:0] = 3'b111;
     assign io_oeb[37:3] = 0;
+    assign io_out_d[2:0] = 0;
 
     // IRQ
     assign irq = 3'b000;	// Unused

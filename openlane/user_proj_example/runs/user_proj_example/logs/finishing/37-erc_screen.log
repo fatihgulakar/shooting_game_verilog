@@ -2,7 +2,7 @@ CVC: Circuit Validation Check  Version 1.1.0
 CVC: Log output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt
 CVC: Error output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt.error.gz
 CVC: Debug output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt.debug.gz
-CVC: Start: Wed Jun 15 16:12:46 2022
+CVC: Start: Wed Jun 15 16:44:12 2022
 
 Using the following parameters for CVC (Circuit Validation Check) from /openlane/scripts/cvc/sky130A/cvcrc.sky130A
 CVC_TOP = 'user_proj_example'
@@ -47,12 +47,12 @@ CVC: Reading device model settings...
 CVC: Reading power settings...
 CVC: Parsing netlist /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/finishing/user_proj_example.cdl
 
-Cdl fixed data size 2820450
-Usage CDL: Time: 0  Memory: 93476  I/O: 200  Swap: 0
+Cdl fixed data size 2866068
+Usage CDL: Time: 0  Memory: 94572  I/O: 8  Swap: 0
 CVC: Counting and linking...
 CVC: Assigning IDs ...
-Usage DB: Time: 1  Memory: 106364  I/O: 200  Swap: 0
-CVC: 174000(174000) instances, 47466(47466) nets, 313404(313404) devices.
+Usage DB: Time: 1  Memory: 107584  I/O: 8  Swap: 0
+CVC: 176847(176847) instances, 40924(40924) nets, 302900(302900) devices.
 Setting power for mode...
 Setting models...
 CVC: Setting models ...
@@ -63,21 +63,21 @@ CVC: Shorting switches...
 Setting instance power...
 CVC: Linking devices...
 
-Usage EQUIV: Time: 1  Memory: 127600  I/O: 344  Swap: 0
+Usage EQUIV: Time: 1  Memory: 127216  I/O: 72  Swap: 0
 Power nets 377
 CVC: Shorting non conducting resistors...
 CVC: Calculating resistor voltages...
-Usage RES: Time: 1  Memory: 127600  I/O: 480  Swap: 0
+Usage RES: Time: 1  Memory: 127216  I/O: 72  Swap: 0
 Power nets 377
 CVC: Calculating min/max voltages...
-Processing trivial nets found 22783 trivial nets
+Processing trivial nets found 16080 trivial nets
 CVC: Ignoring invalid calculations...
 CVC:   Removed 0 calculations
 Copying master nets
 CVC: Ignoring non-conducting devices...
 CVC:   Ignored 0 devices
-Usage MIN/MAX1: Time: 1  Memory: 128704  I/O: 480  Swap: 0
-Power nets 12990
+Usage MIN/MAX1: Time: 1  Memory: 128332  I/O: 72  Swap: 0
+Power nets 13068
 ! Checking forward bias diode errors: 
 
 ! Checking nmos source/drain vs bias errors: 
@@ -88,25 +88,25 @@ Power nets 12990
 
 ! Checking pmos gate vs source errors: 
 
-Usage ERROR: Time: 1  Memory: 128704  I/O: 480  Swap: 0
+Usage ERROR: Time: 1  Memory: 128332  I/O: 72  Swap: 0
 Saving min/max voltages...
 CVC: Propagating Simulation voltages 1...
-Usage SIM1: Time: 1  Memory: 130288  I/O: 480  Swap: 0
-Power nets 12990
+Usage SIM1: Time: 1  Memory: 129916  I/O: 72  Swap: 0
+Power nets 13068
 Saving simulation voltages...
 CVC: Propagating Simulation voltages 3...
-Usage SIM2: Time: 1  Memory: 130816  I/O: 480  Swap: 0
-Power nets 12990
+Usage SIM2: Time: 1  Memory: 130180  I/O: 72  Swap: 0
+Power nets 13068
 Added 0 latch voltages
 CVC: Calculating min/max voltages...
-Processing trivial nets found 22783 trivial nets
+Processing trivial nets found 16080 trivial nets
 CVC: Ignoring invalid calculations...
 CVC:   Removed 0 calculations
 Copying master nets
 CVC: Ignoring non-conducting devices...
 CVC:   Ignored 0 devices
-Usage MIN/MAX2: Time: 1  Memory: 131608  I/O: 488  Swap: 0
-Power nets 25603
+Usage MIN/MAX2: Time: 1  Memory: 131236  I/O: 80  Swap: 0
+Power nets 25759
 ! Checking overvoltage errors
 
 ! Checking nmos possible leak errors: 
@@ -138,8 +138,8 @@ CVC: Overvoltage-VGS:       0
 CVC: Model errors:          0
 CVC: Unexpected voltage :   0
 CVC: Total:                 0
-Usage Total: Time: 1  Memory: 132132  I/O: 528  Swap: 0
-Virtual net update/access 401158/20716364
+Usage Total: Time: 1  Memory: 131764  I/O: 120  Swap: 0
+Virtual net update/access 375404/19615379
 CVC: Log output to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/user_proj_example.rpt
-CVC: End: Wed Jun 15 16:12:48 2022
+CVC: End: Wed Jun 15 16:44:14 2022
 

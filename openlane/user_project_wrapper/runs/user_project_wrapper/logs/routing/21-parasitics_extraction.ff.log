@@ -20,19 +20,19 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO RCX-0008] extracting parasitics of user_project_wrapper ...
 [INFO RCX-0435] Reading extraction model file /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/rcx_rules.info ...
 [INFO RCX-0436] RC segment generation user_project_wrapper (max_merge_res 50.0) ...
-[INFO RCX-0040] Final 4229 rc segments
+[INFO RCX-0040] Final 4204 rc segments
 [INFO RCX-0439] Coupling Cap extraction user_project_wrapper ...
 [INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
-[INFO RCX-0043] 4387 wires to be extracted
-[INFO RCX-0442] 17% completion -- 766 wires have been extracted
-[INFO RCX-0442] 43% completion -- 1908 wires have been extracted
-[INFO RCX-0442] 47% completion -- 2093 wires have been extracted
-[INFO RCX-0442] 56% completion -- 2470 wires have been extracted
-[INFO RCX-0442] 68% completion -- 2996 wires have been extracted
-[INFO RCX-0442] 79% completion -- 3506 wires have been extracted
-[INFO RCX-0442] 90% completion -- 3992 wires have been extracted
-[INFO RCX-0442] 100% completion -- 4387 wires have been extracted
-[INFO RCX-0045] Extract 643 nets, 4836 rsegs, 4836 caps, 2474 ccs
+[INFO RCX-0043] 4361 wires to be extracted
+[INFO RCX-0442] 17% completion -- 762 wires have been extracted
+[INFO RCX-0442] 43% completion -- 1898 wires have been extracted
+[INFO RCX-0442] 51% completion -- 2256 wires have been extracted
+[INFO RCX-0442] 56% completion -- 2466 wires have been extracted
+[INFO RCX-0442] 68% completion -- 2995 wires have been extracted
+[INFO RCX-0442] 80% completion -- 3502 wires have been extracted
+[INFO RCX-0442] 91% completion -- 3972 wires have been extracted
+[INFO RCX-0442] 100% completion -- 4361 wires have been extracted
+[INFO RCX-0045] Extract 643 nets, 4811 rsegs, 4811 caps, 2428 ccs
 [INFO RCX-0015] Finished extracting user_project_wrapper.
 [INFO RCX-0016] Writing SPEF ...
 [INFO RCX-0443] 637 nets finished

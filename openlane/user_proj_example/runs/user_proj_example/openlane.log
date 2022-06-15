@@ -168,33 +168,10 @@ Total errors = 0
 
 Antenna Summary:
 Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/antenna.rpt
-Number of pins violated: 13
-Number of nets violated: 13
+Number of pins violated: 8
+Number of nets violated: 8
 [INFO]: check full report here: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv
 [INFO]: There are no max slew violations in the design at the typical corner.
 [INFO]: There are no hold violations in the design at the typical corner.
-[ERROR]: There are setup violations in the design at the typical corner. Please refer to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/routing/26-parasitics_sta.max.rpt.
-[INFO]: Calculating Runtime From the Start...
-[INFO]: Generating Final Summary Report...
-[INFO]: Design Name: user_proj_example
-Run Directory: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example
-----------------------------------------
-
-Magic DRC Summary:
-Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/drc.rpt
-Total Magic DRC violations is 0
-----------------------------------------
-
-LVS Summary:
-Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/logs/finishing/34-user_proj_example.lvs.lef.log
-LVS reports no net, device, pin, or property mismatches.
-Total errors = 0
-----------------------------------------
-
-Antenna Summary:
-Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/finishing/antenna.rpt
-Number of pins violated: 13
-Number of nets violated: 13
-[INFO]: check full report here: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv
-[INFO]: Saving runtime environment...
-[ERROR]: Flow failed.
+[INFO]: There are no setup violations in the design at the typical corner.
+[SUCCESS]: Flow complete.

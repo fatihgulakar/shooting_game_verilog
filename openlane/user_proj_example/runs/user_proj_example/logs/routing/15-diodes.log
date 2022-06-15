@@ -9,9 +9,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts/13-resizer_timing.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 35411 components and 136727 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 98156 connections.
-[INFO ODB-0133]     Created 13132 nets and 38327 connections.
+[INFO ODB-0131]     Created 34362 components and 130493 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 93960 connections.
+[INFO ODB-0133]     Created 12083 nets and 36289 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/cts/13-resizer_timing.def
 Design name: user_proj_example
-Inserted 5111 diodes.
+Inserted 6747 diodes.

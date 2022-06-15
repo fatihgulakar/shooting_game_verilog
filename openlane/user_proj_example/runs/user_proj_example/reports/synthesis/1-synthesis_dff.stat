@@ -3,24 +3,24 @@
 
 === user_proj_example ===
 
-   Number of wires:              12963
-   Number of wire bits:          13995
+   Number of wires:              12960
+   Number of wire bits:          13992
    Number of public wires:          79
    Number of public wire bits:    1031
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              13345
-     $_ANDNOT_                    3657
+   Number of cells:              13342
+     $_ANDNOT_                    3658
      $_AND_                        296
-     $_MUX_                       3073
+     $_MUX_                       3072
      $_NAND_                       443
-     $_NOR_                        507
-     $_NOT_                        833
-     $_ORNOT_                      580
+     $_NOR_                        508
+     $_NOT_                        835
+     $_ORNOT_                      579
      $_OR_                        1927
-     $_XNOR_                       164
-     $_XOR_                       1447
+     $_XNOR_                       162
+     $_XOR_                       1444
      sky130_fd_sc_hd__dfrtp_2      328
      sky130_fd_sc_hd__dfstp_2       39
      sky130_fd_sc_hd__dfxtp_2       51

@@ -157,7 +157,7 @@ set ::env(MACRO_BLOCKAGES_LAYER) {li1 met1 met2 met3 met4}
 set ::env(MACRO_PLACEMENT_CFG) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/macro.cfg}
 set ::env(MAGIC_CONVERT_DRC_TO_RDB) {1}
 set ::env(MAGIC_DISABLE_HIER_GDS) {1}
-set ::env(MAGIC_DRC_USE_GDS) {1}
+set ::env(MAGIC_DRC_USE_GDS) {0}
 set ::env(MAGIC_EXT_USE_GDS) {0}
 set ::env(MAGIC_GENERATE_GDS) {1}
 set ::env(MAGIC_GENERATE_LEF) {1}
@@ -208,7 +208,7 @@ set ::env(PROCESS) {130}
 set ::env(QUIT_ON_HOLD_VIOLATIONS) {1}
 set ::env(QUIT_ON_ILLEGAL_OVERLAPS) {1}
 set ::env(QUIT_ON_LVS_ERROR) {1}
-set ::env(QUIT_ON_MAGIC_DRC) {1}
+set ::env(QUIT_ON_MAGIC_DRC) {0}
 set ::env(QUIT_ON_SETUP_VIOLATIONS) {1}
 set ::env(QUIT_ON_TIMING_VIOLATIONS) {1}
 set ::env(QUIT_ON_TR_DRC) {1}
@@ -225,17 +225,17 @@ set ::env(RE_BUFFER_CELL) {sky130_fd_sc_hd__buf_4}
 set ::env(RIGHT_MARGIN_MULT) {12}
 set ::env(RIPPLE_CARRY_ADDER_MAP) {/home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/rca_map.v}
 set ::env(ROOT_CLK_BUFFER) {sky130_fd_sc_hd__clkbuf_16}
-set ::env(ROUTING_CORES) {2}
+set ::env(ROUTING_CORES) {4}
 set ::env(RT_MAX_LAYER) {met4}
 set ::env(RT_MIN_LAYER) {met1}
 set ::env(RUN_CVC) {0}
 set ::env(RUN_DIR) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper}
 set ::env(RUN_KLAYOUT) {1}
 set ::env(RUN_KLAYOUT_DRC) {0}
-set ::env(RUN_KLAYOUT_XOR) {1}
+set ::env(RUN_KLAYOUT_XOR) {0}
 set ::env(RUN_LVS) {1}
 set ::env(RUN_MAGIC) {1}
-set ::env(RUN_MAGIC_DRC) {1}
+set ::env(RUN_MAGIC_DRC) {0}
 set ::env(RUN_ROUTING_DETAILED) {1}
 set ::env(RUN_SIMPLE_CTS) {0}
 set ::env(RUN_SPEF_EXTRACTION) {1}
@@ -300,7 +300,7 @@ set ::env(cts_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane
 set ::env(cts_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/cts}
 set ::env(cts_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/cts}
 set ::env(cts_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/cts}
-set ::env(datetime) {2022.06.15_15.41.02}
+set ::env(datetime) {2022.06.15_16.46.42}
 set ::env(eco_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/eco}
 set ::env(eco_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/eco}
 set ::env(eco_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/eco}
@@ -328,11 +328,11 @@ set ::env(synthesis_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilo
 set ::env(SYNTH_MAX_TRAN) {0.75}
 set ::env(CURRENT_DEF) /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def
 set ::env(CURRENT_GUIDE) /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/15-global.guide
-set ::env(CURRENT_INDEX) 32
-set ::env(CURRENT_NETLIST) /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_netlist.v
+set ::env(CURRENT_INDEX) 30
+set ::env(CURRENT_NETLIST) /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_netlist.v
 set ::env(PREV_NETLIST) /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/17-detailed.v
 set ::env(PDK_ROOT) {/home/fatihgulakar/638_proje/pdks}
-set ::env(ANTENNA_CHECKER_LOG) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/32-antenna.log}
+set ::env(ANTENNA_CHECKER_LOG) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/30-antenna.log}
 set ::env(ANTENNA_CHECK_CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def}
 set ::env(BASE_SDC_FILE) {/openlane/scripts/base.sdc}
 set ::env(BOTTOM_MARGIN_MULT) {4}
@@ -376,8 +376,8 @@ set ::env(CTS_TOLERANCE) {100}
 set ::env(CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def}
 set ::env(CURRENT_GDS) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.gds}
 set ::env(CURRENT_GUIDE) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/15-global.guide}
-set ::env(CURRENT_INDEX) {32}
-set ::env(CURRENT_NETLIST) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_netlist.v}
+set ::env(CURRENT_INDEX) {30}
+set ::env(CURRENT_NETLIST) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_netlist.v}
 set ::env(CURRENT_SDC) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/floorplan/3-initial_fp.sdc}
 set ::env(CURRENT_SDF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.sdf}
 set ::env(CURRENT_SPEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.ff.spef}
@@ -492,8 +492,8 @@ set ::env(GPIO_PADS_LEF) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sk
 set ::env(GPIO_PADS_LEF_CORE_SIDE) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.lef /home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/custom_cells/lef/sky130_ef_io_core.lef }
 set ::env(GPIO_PADS_VERILOG) { /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io.v /home/fatihgulakar/638_proje/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io__gpiov2_pad_wrapped.v }
 set ::env(HOME) {/}
-set ::env(HOSTNAME) {715fb6a792fe}
-set ::env(INPUT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_def.def}
+set ::env(HOSTNAME) {6de17ff0f2c3}
+set ::env(INPUT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_def.def}
 set ::env(IO_PCT) {0.2}
 set ::env(KLAYOUT_DRC_KLAYOUT_GDS) {0}
 set ::env(KLAYOUT_DRC_TECH_SCRIPT) {/home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/klayout/sky130A_mr.drc}
@@ -527,7 +527,7 @@ set ::env(MACRO_BLOCKAGES_LAYER) {li1 met1 met2 met3 met4}
 set ::env(MACRO_PLACEMENT_CFG) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/macro.cfg}
 set ::env(MAGIC_CONVERT_DRC_TO_RDB) {1}
 set ::env(MAGIC_DISABLE_HIER_GDS) {1}
-set ::env(MAGIC_DRC_USE_GDS) {1}
+set ::env(MAGIC_DRC_USE_GDS) {0}
 set ::env(MAGIC_EXT_USE_GDS) {0}
 set ::env(MAGIC_GDS) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.magic.gds}
 set ::env(MAGIC_GENERATE_GDS) {1}
@@ -559,7 +559,7 @@ set ::env(OPENROAD) {/build/}
 set ::env(OPENROAD_BIN) {openroad}
 set ::env(PATH) {/openlane:/openlane/scripts:/build//bin:/build//bin/Linux-x86_64:/build//pdn/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin}
 set ::env(PDK) {sky130A}
-set ::env(PDKPATH) {/home/fatihgulakar/638_proje/pdks/sky130A}
+set ::env(PDKPATH) {/home/fatihgulakar/638_proje/pdks/sky130A/}
 set ::env(PDK_ROOT) {/home/fatihgulakar/638_proje/pdks}
 set ::env(PDN_CFG) {/openlane/scripts/openroad/pdn_cfg.tcl}
 set ::env(PGA_RPT_FILE) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/floorplan/9-pdn.pga.rpt}
@@ -604,7 +604,7 @@ set ::env(PWD) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane}
 set ::env(QUIT_ON_HOLD_VIOLATIONS) {1}
 set ::env(QUIT_ON_ILLEGAL_OVERLAPS) {1}
 set ::env(QUIT_ON_LVS_ERROR) {1}
-set ::env(QUIT_ON_MAGIC_DRC) {1}
+set ::env(QUIT_ON_MAGIC_DRC) {0}
 set ::env(QUIT_ON_SETUP_VIOLATIONS) {1}
 set ::env(QUIT_ON_TIMING_VIOLATIONS) {1}
 set ::env(QUIT_ON_TR_DRC) {1}
@@ -621,7 +621,7 @@ set ::env(RE_BUFFER_CELL) {sky130_fd_sc_hd__buf_4}
 set ::env(RIGHT_MARGIN_MULT) {12}
 set ::env(RIPPLE_CARRY_ADDER_MAP) {/home/fatihgulakar/638_proje/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/rca_map.v}
 set ::env(ROOT_CLK_BUFFER) {sky130_fd_sc_hd__clkbuf_16}
-set ::env(ROUTING_CORES) {2}
+set ::env(ROUTING_CORES) {4}
 set ::env(ROUTING_CURRENT_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/placement/user_project_wrapper.def}
 set ::env(RT_MAX_LAYER) {met4}
 set ::env(RT_MIN_LAYER) {met1}
@@ -629,10 +629,10 @@ set ::env(RUN_CVC) {0}
 set ::env(RUN_DIR) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper}
 set ::env(RUN_KLAYOUT) {1}
 set ::env(RUN_KLAYOUT_DRC) {0}
-set ::env(RUN_KLAYOUT_XOR) {1}
+set ::env(RUN_KLAYOUT_XOR) {0}
 set ::env(RUN_LVS) {1}
 set ::env(RUN_MAGIC) {1}
-set ::env(RUN_MAGIC_DRC) {1}
+set ::env(RUN_MAGIC_DRC) {0}
 set ::env(RUN_ROUTING_DETAILED) {1}
 set ::env(RUN_SIMPLE_CTS) {0}
 set ::env(RUN_SPEF_EXTRACTION) {1}
@@ -641,7 +641,7 @@ set ::env(RUN_TAG) {user_project_wrapper}
 set ::env(SAVE_DEF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.def}
 set ::env(SAVE_FINAL_VIEWS) {1}
 set ::env(SAVE_GUIDE) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/15-global.guide}
-set ::env(SAVE_NETLIST) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_netlist.v}
+set ::env(SAVE_NETLIST) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_netlist.v}
 set ::env(SAVE_SDC) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/floorplan/3-initial_fp.sdc}
 set ::env(SAVE_SDF) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/routing/user_project_wrapper.sdf}
 set ::env(SCRIPTS_DIR) {/openlane/scripts}
@@ -719,8 +719,7 @@ set ::env(cts_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane
 set ::env(cts_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/cts}
 set ::env(cts_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/cts}
 set ::env(cts_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/cts}
-set ::env(datetime) {2022.06.15_15.41.02}
-set ::env(drc_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/finishing/drc}
+set ::env(datetime) {2022.06.15_16.46.42}
 set ::env(eco_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/eco}
 set ::env(eco_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/eco}
 set ::env(eco_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/eco}
@@ -734,7 +733,7 @@ set ::env(floorplan_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog
 set ::env(floorplan_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/floorplan}
 set ::env(floorplan_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/floorplan}
 set ::env(fp_report_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/floorplan/3-initial_fp}
-set ::env(magic_extract_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/27-ext2}
+set ::env(magic_extract_prefix) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/26-ext2}
 set ::env(placement_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/placement}
 set ::env(placement_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/placement}
 set ::env(placement_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/placement}
@@ -748,6 +747,6 @@ set ::env(synthesis_logs) {/home/fatihgulakar/638_proje/shooting_game_verilog/op
 set ::env(synthesis_reports) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/synthesis}
 set ::env(synthesis_results) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/synthesis}
 set ::env(synthesis_tmpfiles) {/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/synthesis}
-set ::env(timer_end) {1655308368}
-set ::env(timer_routed) {1655307791}
-set ::env(timer_start) {1655307662}
+set ::env(timer_end) {1655311738}
+set ::env(timer_routed) {1655311689}
+set ::env(timer_start) {1655311602}

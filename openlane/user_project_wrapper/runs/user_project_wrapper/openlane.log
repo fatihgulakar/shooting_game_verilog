@@ -113,30 +113,20 @@
 [INFO]: Streaming out GDS II...
 [INFO]: Back-up GDS-II streamed out.
 [INFO]: Incremented step index to 25.
-[INFO]: Running XOR on the layouts using Klayout...
-[INFO]: Klayout XOR Complete
-[INFO]: Incremented step index to 26.
 [INFO]: Running Magic Spice Export from LEF...
 [INFO]: No illegal overlaps detected during extraction.
-[INFO]: Incremented step index to 27.
+[INFO]: Incremented step index to 26.
 [INFO]: Writing Powered Verilog...
-[INFO]: Incremented step index to 28.
+[INFO]: Incremented step index to 27.
 [INFO]: Writing Verilog...
 [INFO]: Yosys won't attempt to rewrite verilog, and the OpenROAD output will be used as is.
-[INFO]: Changing netlist from /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/17-detailed.v to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_netlist.v
-[INFO]: Incremented step index to 29.
+[INFO]: Changing netlist from /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/routing/17-detailed.v to /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_netlist.v
+[INFO]: Incremented step index to 28.
 [INFO]: Running LEF LVS...
-[INFO]: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.spice against /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/27-powered_netlist.v
+[INFO]: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.spice against /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/tmp/finishing/26-powered_netlist.v
 [INFO]: No LVS mismatches.
-[INFO]: Incremented step index to 30.
-[INFO]: Running Magic DRC...
-[INFO]: Converting Magic DRC Violations to Magic Readable Format...
-[INFO]: Converting Magic DRC Violations to Klayout XML Database...
-[INFO]: Converting DRC Violations to RDB Format...
-[INFO]: Converted DRC Violations to RDB Format
-[INFO]: No DRC violations after GDS streaming out.
 [INFO]: Running Antenna Checks...
-[INFO]: Incremented step index to 31.
+[INFO]: Incremented step index to 29.
 [INFO]: Running OpenROAD Antenna Rule Checker...
 [INFO]: Skipping CVC...
 [INFO]: Saving final set of views in '/home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/results/final'...
@@ -146,15 +136,11 @@
 [INFO]: Generating Final Summary Report...
 [INFO]: Design Name: user_project_wrapper
 Run Directory: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper
-----------------------------------------
-
-Magic DRC Summary:
-Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/reports/finishing/drc.rpt
-Total Magic DRC violations is 0
+Source not found.
 ----------------------------------------
 
 LVS Summary:
-Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/30-user_project_wrapper.lvs.lef.log
+Source: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_project_wrapper/runs/user_project_wrapper/logs/finishing/29-user_project_wrapper.lvs.lef.log
 LVS reports no net, device, pin, or property mismatches.
 Total errors = 0
 ----------------------------------------

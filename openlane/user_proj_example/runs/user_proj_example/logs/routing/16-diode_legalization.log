@@ -9,20 +9,20 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/15-diodes.def
 [INFO ODB-0128] Design: user_proj_example
 [INFO ODB-0130]     Created 609 pins.
-[INFO ODB-0131]     Created 41315 components and 166247 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 121772 connections.
-[INFO ODB-0133]     Created 13132 nets and 44231 connections.
+[INFO ODB-0131]     Created 42774 components and 172553 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 127608 connections.
+[INFO ODB-0133]     Created 12083 nets and 44701 connections.
 [INFO ODB-0134] Finished DEF file: /home/fatihgulakar/638_proje/shooting_game_verilog/openlane/user_proj_example/runs/user_proj_example/tmp/routing/15-diodes.def
 Placement Analysis
 ---------------------------------
-total displacement      19782.4 u
-average displacement        0.5 u
-max displacement           22.5 u
-original HPWL          628574.7 u
-legalized HPWL         643434.4 u
+total displacement      27620.7 u
+average displacement        0.6 u
+max displacement           32.2 u
+original HPWL          618436.8 u
+legalized HPWL         633044.4 u
 delta HPWL                    2 %
 
-[INFO DPL-0020] Mirrored 8867 instances
-[INFO DPL-0021] HPWL before          643434.4 u
-[INFO DPL-0022] HPWL after           633259.7 u
-[INFO DPL-0023] HPWL delta               -1.6 %
+[INFO DPL-0020] Mirrored 8629 instances
+[INFO DPL-0021] HPWL before          633044.4 u
+[INFO DPL-0022] HPWL after           624580.1 u
+[INFO DPL-0023] HPWL delta               -1.3 %
