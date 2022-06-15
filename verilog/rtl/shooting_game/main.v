@@ -5,14 +5,14 @@
 module main(
   input             ps2_data,
   input             ps2_clk,
-  input             board_clk,
+  input             board_clk, //100MHZ
   input             start,
   input             reset,
   output wire       hsync,
   output wire       vsync,
-  output wire [2:0] red,
-  output wire [2:0] green,
-  output wire [1:0] blue
+  output wire [3:0] red,
+  output wire [3:0] green,
+  output wire [3:0] blue
 );
 
   wire [31:0] column;
@@ -25,7 +25,6 @@ module main(
 
   color_generator color(
     .game_clk   (game_clk),
-    .vga_clk    (vga_clk),
     .disp_en    (disp_en),
     .p1_control (p1_control),
     .p2_control (p2_control),
@@ -33,10 +32,18 @@ module main(
     .reset      (reset),
     .column     (column),
     .row        (row),
-    .red        (red),
-    .green      (green),
-    .blue       (blue)
+    .red        (red[3:1]),
+    .green      (green[3:1]),
+    .blue       (blue[3:2])
   );
+  
+  assign blue [1:0] = 2'b00;
+  assign red [0] = 1'b0;
+  assign green [0] = 1'b0;
+  //  output wire [2:0] red,
+  //   output wire [2:0] green,
+  //   output wire [1:0] blue
+   
 
   sync_generator sync(
     .vga_clk (vga_clk),
@@ -49,26 +56,29 @@ module main(
   );
 
   kb2game keyb(
-    board_clk,
-    ps2_clk,
-    ps2_data,
-    p1_control,
-    p2_control
+    .board_clk (board_clk),
+    .ps2_clk (ps2_clk),
+    .reset (reset),
+    .ps2_data (ps2_data),
+    .p1(p1_control),
+    .p2(p2_control)
   );
 
   freq_divider #(
     21
   ) freq_21(
-    board_clk,
-    game_clk
+    .in_clk (board_clk),
+    .reset   (reset),
+    .out_clk (game_clk)
   );
 
   // clock for game refresh ( ~47 Hz )
   freq_divider #(
     2
   ) freq_2(
-    board_clk,
-    vga_clk
+    .in_clk (board_clk),
+    .reset   (reset),
+    .out_clk (vga_clk)
   );
 
     // clock for displaying pixels

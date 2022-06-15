@@ -1,3 +1,7 @@
+//----------------------------------------------------------------------------------
+//-- Vertical and Horizontal Sync generator for vga output
+//----------------------------------------------------------------------------------
+
 module sync_generator(
 input wire vga_clk,
 input wire reset,
@@ -8,16 +12,16 @@ output reg [31:0] column,
 output reg [31:0] row
 );
 
-  parameter h_total = 800;  //total number of pixels
-  parameter h_disp = 640;  //displayed interval
-  parameter h_pw = 96;  //pulse width
-  parameter h_fp = 16;  //fronth porch
-  parameter h_bp = 48;  //back porch
-  parameter v_total = 521;
-  parameter v_disp = 480;
-  parameter v_pw = 2;
-  parameter v_fp = 10;
-  parameter v_bp = 29;
+  localparam h_total = 800;  //total number of pixels
+  localparam h_disp = 640;  //displayed interval
+  localparam h_pw = 96;  //pulse width
+  localparam h_fp = 16;  //fronth porch
+  localparam h_bp = 48;  //back porch
+  localparam v_total = 521;
+  localparam v_disp = 480;
+  localparam v_pw = 2;
+  localparam v_fp = 10;
+  localparam v_bp = 29;
 
   reg [31:0] h_count;
   reg [31:0] v_count;
@@ -28,6 +32,9 @@ output reg [31:0] row
       v_count <= v_disp + v_fp;
       hsync <= 1'b0;
       vsync <= 1'b0;
+      column <=   h_disp + h_fp;
+      row <= v_disp + v_fp;
+      disp_en <=  1'b0;
     end else begin
       if(h_count < (h_total - 1)) begin
         h_count <= h_count + 1;
@@ -54,9 +61,13 @@ output reg [31:0] row
       //pixel coords
       if(h_count < h_disp) begin
         column <= h_count;
+      end else begin
+        column <= column;
       end
       if(v_count < v_disp) begin
         row <= v_count;
+      end else begin
+        row <= row;
       end
       if(h_count < h_disp && v_count < v_disp) begin
         disp_en <= 1'b1;
